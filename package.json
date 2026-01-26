@@ -1,0 +1,33 @@
+{
+    "name": "woc_natural_order",
+    "version": "0.1.0",
+    "description": "",
+    "scripts": {
+        "dev": "node ./scripts/dev.js",
+        "build": "node ./scripts/build.js",
+        "uuid": "node ./scripts/genUuids.js"
+    },
+    "keywords": [
+        "minecraft",
+        "scripts",
+        "minecraft-scripts"
+    ],
+    "author": {
+        "email": "hormigadev7@gmail.com",
+        "name": "HormigaDev"
+    },
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "@minecraft/server": "^2.4.0",
+        "archiver": "^7.0.1",
+        "dotenv": "^17.2.3",
+        "strip-json-comments": "^5.0.3",
+        "terser": "^5.46.0",
+        "uuid": "^13.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.7.0",
+        "@types/node": "^22.0.0"
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:farmland",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "woc:hydration": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                "woc:fertilizer_level": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            },
+            "tags": ["minecraft:dirt", "dirt", "minecraft:farmland", "farmland"]
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 15, 16]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 15, 16]
+            },
+            "minecraft:geometry": "geometry.farmland",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "dirt",
+                    "render_method": "opaque"
+                },
+                "up": {
+                    "texture": "farmland_dry",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:custom_components": ["woc:farmland_logic"],
+            "minecraft:random_ticking": {},
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.6
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3.0
+            },
+            "minecraft:map_color": "#966c4a"
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:hydration') > 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "dirt",
+                            "render_method": "opaque"
+                        },
+                        "up": {
+                            "texture": "farmland_wet",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

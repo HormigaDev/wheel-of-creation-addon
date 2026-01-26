@@ -1,0 +1,56 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Wheel of Creation: [NAME]",
+        "name": "WoC [NAME] BP",
+        "uuid": "8b1267c6-23a4-4ed6-b785-11c51207e2b9",
+        "version": [
+            0,
+            0,
+            1
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "Logic",
+            "type": "data",
+            "uuid": "7b367cdd-60ec-42ad-abe9-aae7f7808428",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        },
+        {
+            "description": "Scripts",
+            "type": "script",
+            "language": "javascript",
+            "uuid": "7d1d48f3-9d6d-48da-9022-eddc031ab328",
+            "version": [
+                0,
+                0,
+                1
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "c3dc7a6d-1ef3-4f79-b226-b72e7bc7468b",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.4.0"
+        }
+    ]
+}
