@@ -9,23 +9,37 @@ const resourceManifestPath = join(resourcePath, 'manifest.json');
 const behaviorManifestPath = join(behaviorPath, 'manifest.json');
 
 function main() {
-    if (!existsSync(resourcePath)) {
-        console.log('Resource folder not found, skipping Resource manifest update.');
-        return;
-    }
-
+    // Track old and new UUIDs for cross-dependencies
     let oldResourceUuid = null;
     let oldResourceVersion = null;
     let newResourceHeaderUuid = null;
 
+    let oldBehaviorUuid = null;
+    let oldBehaviorVersion = null;
+    let newBehaviorHeaderUuid = null;
+
+    // First pass: Read old UUIDs from both manifests
+    if (existsSync(resourceManifestPath)) {
+        const resourceManifest = JSON.parse(readFileSync(resourceManifestPath, 'utf-8'));
+        oldResourceUuid = resourceManifest.header?.uuid;
+        oldResourceVersion = resourceManifest.header?.version;
+    }
+
+    if (existsSync(behaviorManifestPath)) {
+        const behaviorManifest = JSON.parse(readFileSync(behaviorManifestPath, 'utf-8'));
+        oldBehaviorUuid = behaviorManifest.header?.uuid;
+        oldBehaviorVersion = behaviorManifest.header?.version;
+    }
+
+    // Generate new UUIDs
+    newResourceHeaderUuid = uuidv4();
+    newBehaviorHeaderUuid = uuidv4();
+
+    // Update Resource manifest
     if (existsSync(resourceManifestPath)) {
         console.log('Updating Resource manifest...');
         const resourceManifest = JSON.parse(readFileSync(resourceManifestPath, 'utf-8'));
 
-        oldResourceUuid = resourceManifest.header?.uuid;
-        oldResourceVersion = resourceManifest.header?.version;
-
-        newResourceHeaderUuid = uuidv4();
         resourceManifest.header.uuid = newResourceHeaderUuid;
         console.log(`  Header UUID: ${oldResourceUuid} -> ${newResourceHeaderUuid}`);
 
@@ -40,36 +54,36 @@ function main() {
             }
         }
 
-        writeFileSync(resourceManifestPath, JSON.stringify(resourceManifest, null, 4));
-        console.log('Resource manifest updated successfully.\n');
-    } else {
-        console.log('Resource manifest.json not found.');
-    }
-
-    if (existsSync(behaviorManifestPath)) {
-        console.log('Updating Behavior manifest...');
-        const behaviorManifest = JSON.parse(readFileSync(behaviorManifestPath, 'utf-8'));
-
-        if (behaviorManifest.dependencies && Array.isArray(behaviorManifest.dependencies)) {
-            for (const dependency of behaviorManifest.dependencies) {
+        // Update dependency to Behavior Pack
+        if (resourceManifest.dependencies && Array.isArray(resourceManifest.dependencies)) {
+            for (const dependency of resourceManifest.dependencies) {
                 if (
                     'uuid' in dependency &&
                     'version' in dependency &&
-                    dependency.uuid === oldResourceUuid &&
-                    JSON.stringify(dependency.version) === JSON.stringify(oldResourceVersion)
+                    dependency.uuid === oldBehaviorUuid &&
+                    JSON.stringify(dependency.version) === JSON.stringify(oldBehaviorVersion)
                 ) {
                     console.log(
-                        `  Dependency UUID: ${dependency.uuid} -> ${newResourceHeaderUuid}`,
+                        `  Dependency UUID (BP): ${dependency.uuid} -> ${newBehaviorHeaderUuid}`,
                     );
-                    dependency.uuid = newResourceHeaderUuid;
+                    dependency.uuid = newBehaviorHeaderUuid;
                 }
             }
         }
 
-        const oldHeaderUuid = behaviorManifest.header?.uuid;
-        const newHeaderUuid = uuidv4();
-        behaviorManifest.header.uuid = newHeaderUuid;
-        console.log(`  Header UUID: ${oldHeaderUuid} -> ${newHeaderUuid}`);
+        writeFileSync(resourceManifestPath, JSON.stringify(resourceManifest, null, 4));
+        console.log('Resource manifest updated successfully.\n');
+    } else {
+        console.log('Resource manifest.json not found.\n');
+    }
+
+    // Update Behavior manifest
+    if (existsSync(behaviorManifestPath)) {
+        console.log('Updating Behavior manifest...');
+        const behaviorManifest = JSON.parse(readFileSync(behaviorManifestPath, 'utf-8'));
+
+        behaviorManifest.header.uuid = newBehaviorHeaderUuid;
+        console.log(`  Header UUID: ${oldBehaviorUuid} -> ${newBehaviorHeaderUuid}`);
 
         if (behaviorManifest.modules && Array.isArray(behaviorManifest.modules)) {
             for (const module of behaviorManifest.modules) {
@@ -82,10 +96,27 @@ function main() {
             }
         }
 
+        // Update dependency to Resource Pack
+        if (behaviorManifest.dependencies && Array.isArray(behaviorManifest.dependencies)) {
+            for (const dependency of behaviorManifest.dependencies) {
+                if (
+                    'uuid' in dependency &&
+                    'version' in dependency &&
+                    dependency.uuid === oldResourceUuid &&
+                    JSON.stringify(dependency.version) === JSON.stringify(oldResourceVersion)
+                ) {
+                    console.log(
+                        `  Dependency UUID (RP): ${dependency.uuid} -> ${newResourceHeaderUuid}`,
+                    );
+                    dependency.uuid = newResourceHeaderUuid;
+                }
+            }
+        }
+
         writeFileSync(behaviorManifestPath, JSON.stringify(behaviorManifest, null, 4));
         console.log('Behavior manifest updated successfully.\n');
     } else {
-        console.log('Behavior manifest.json not found.');
+        console.log('Behavior manifest.json not found.\n');
     }
 
     console.log('UUID generation complete!');
