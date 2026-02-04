@@ -766,7 +766,7 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 
 ### Pasos de Instalación
 
-1. Descarga el archivo `.mcaddon` desde [Releases].
+1. Descarga el archivo `.mcaddon` desde [Curseforge](https://curseforge.com).
 2. Haz doble clic en el archivo para importarlo a Minecraft.
 3. Crea un mundo nuevo o añádelo a uno existente.
 4. Activa el **Behavior Pack** (Pack de Comportamiento) y el **Resource Pack** (Pack de Recursos).
@@ -928,9 +928,25 @@ Si disfrutas de este nivel de profundidad en tu experiencia de Minecraft y quier
 
 ---
 
+## 💬 Únete a la Comunidad
+
 <div align="center">
 
-**[⬆ Volver arriba](#-wheel-of-creation-agriculture-update)**
+[![Discord](https://img.shields.io/badge/Discord-BBEL%20Studios-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/m7cs2EUc8z)
+
+**¿Quieres conversar, compartir comentarios, o simplemente pasar el rato?**
+
+¡Únete al servidor de Discord de **BBEL Studios**! Habla directamente conmigo, comparte tus granjas, reporta errores, sugiere ideas, o simplemente conecta con otros jugadores.
+
+**[👉 Haz clic aquí para unirte al Discord](https://discord.gg/m7cs2EUc8z)**
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Volver arriba](#-wheel-of-creation-addon)**
 
 ---
 

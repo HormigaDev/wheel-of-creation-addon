@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue?style=for-the-badge)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Script%20API-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
+🌐 **[🇪🇸 Leer en Español](docs/SPANISH.md)** | **[🇧🇷 Ler em Português](docs/PORTUGUESE.md)**
+
 ---
 
 **Transform your Minecraft farming experience with a comprehensive agricultural system that introduces biome-based climate mechanics, crop genetics, soil hydration, and realistic plant growth cycles.**
@@ -766,7 +768,7 @@ Use this chart to plan your farms based on location:
 
 ### Installation Steps
 
-1. Download the `.mcaddon` file from [Releases]
+1. Download the `.mcaddon` file from [Curseforge](https://curseforge.com)
 2. Double-click the file to import into Minecraft
 3. Create a new world or add to existing world
 4. Enable the **Behavior Pack** and **Resource Pack**
@@ -920,6 +922,22 @@ If you enjoy this level of depth in your Minecraft experience and want to see th
 </div>
 
 > 🙏 **Thank you** to everyone who has already supported or contributed to this project. Whether through donations, bug reports, translations, or simply spreading the word—you are what makes open source amazing.
+
+---
+
+## 💬 Join the Community
+
+<div align="center">
+
+[![Discord](https://img.shields.io/badge/Discord-BBEL%20Studios-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/m7cs2EUc8z)
+
+**Want to chat, share feedback, or just hang out?**
+
+Join the **BBEL Studios** Discord server! Talk directly with me, share your farms, report bugs, suggest ideas, or just connect with other players.
+
+**[👉 Click here to join the Discord](https://discord.gg/m7cs2EUc8z)**
+
+</div>
 
 ---
 

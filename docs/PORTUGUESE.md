@@ -766,7 +766,7 @@ Use esta tabela para planejar suas fazendas com base na localização:
 
 ### Passos para Instalação
 
-1. Baixe o arquivo `.mcaddon` de [Releases].
+1. Baixe o arquivo `.mcaddon` de [Curseforge](https://curseforge.com).
 2. Clique duas vezes no arquivo para importar para o Minecraft.
 3. Crie um novo mundo ou adicione a um mundo existente.
 4. Ative o **Behavior Pack** e o **Resource Pack**.
@@ -923,9 +923,25 @@ Se você curte esse nível de profundidade na sua experiência de Minecraft e qu
 
 ---
 
+## 💬 Junte-se à Comunidade
+
 <div align="center">
 
-**[⬆ Voltar ao Topo](#-wheel-of-creation-agriculture-update)**
+[![Discord](https://img.shields.io/badge/Discord-BBEL%20Studios-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/m7cs2EUc8z)
+
+**Quer conversar, compartilhar feedback, ou apenas relaxar?**
+
+Junte-se ao servidor Discord da **BBEL Studios**! Fale diretamente comigo, compartilhe suas fazendas, reporte bugs, sugira ideias, ou simplesmente conecte-se com outros jogadores.
+
+**[👉 Clique aqui para entrar no Discord](https://discord.gg/m7cs2EUc8z)**
+
+</div>
+
+---
+
+<div align="center">
+
+**[⬆ Voltar ao Topo](#-wheel-of-creation-addon)**
 
 ---
 
