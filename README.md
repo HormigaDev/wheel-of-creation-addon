@@ -34,6 +34,22 @@ This is the **first release** of the Agriculture Update series. Stay tuned for *
 
 ---
 
+<div align="center">
+
+### ✅ 100% FUNCTIONAL — Read Before Playing!
+
+</div>
+
+> 📢 **Important Clarification**: This addon focuses on **crop mechanics** and is the first of many planned updates. However, this does **NOT** mean the addon is incomplete or that something doesn't work properly.
+>
+> 🎮 **The addon is 100% functional and ready to play.** All crop systems, climate mechanics, genetics, composting, and tools work exactly as designed. You can install it right now and enjoy a complete, polished farming experience.
+>
+> 🔧 **Why "Update I"?** There are many more features in active development that will expand the addon over time. By releasing in updates, I can deliver quality content sooner and gather valuable player feedback.
+>
+> 💬 **Your feedback matters!** If you play and share your experience, you'll help me balance the mechanics better. Report bugs, suggest tweaks, or just tell me what you think — the community shapes this project.
+
+---
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)

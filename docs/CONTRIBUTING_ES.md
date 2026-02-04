@@ -33,6 +33,12 @@ Este proyecto sigue un código de conducta simple:
 
 > ⚠️ **Nota**: Este addon está inspirado en TerraFirmaCraft pero NO está afiliado con él. Por favor no crees issues comparando funcionalidades o pidiendo réplicas exactas de mecánicas de TFC.
 
+### 💰 Aviso de Transparencia
+
+> Este proyecto genera ingresos mínimos a través de **CurseForge Rewards** para cubrir costos de desarrollo. Las contribuciones voluntarias vía Pull Request se consideran **donaciones al proyecto** bajo la licencia GPL v3.
+>
+> **Si buscas una colaboración remunerada o por objetivos, por favor contacta conmigo antes de empezar a trabajar.**
+
 ---
 
 ## 🌟 ¿Cómo Puedo Contribuir?
@@ -72,7 +78,7 @@ Error en Content Log: Ninguno visible
 
 ### 💡 Sugerir Funcionalidades
 
-¿Tienes una idea? ¡Nos encantaría escucharla!
+¿Tienes una idea? ¡Me encantaría escucharla!
 
 1. **Revisa el Roadmap** — Tu idea podría ya estar planeada.
 2. **Crea un issue** con la etiqueta `enhancement`.

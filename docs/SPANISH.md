@@ -32,6 +32,22 @@ Esta es la **primera versión** de la serie Agriculture Update. Mantente atento 
 
 ---
 
+<div align="center">
+
+### ✅ 100% FUNCIONAL — ¡Lee Antes de Jugar!
+
+</div>
+
+> 📢 **Aclaración Importante**: Este addon se enfoca en las **mecánicas de cultivos** y es la primera de muchas actualizaciones planeadas. Sin embargo, esto **NO** significa que el addon esté incompleto o que algo no funcione correctamente.
+>
+> 🎮 **El addon es 100% funcional y está listo para jugar.** Todos los sistemas de cultivos, mecánicas climáticas, genética, compostaje y herramientas funcionan exactamente como fueron diseñados. Puedes instalarlo ahora mismo y disfrutar de una experiencia agrícola completa y pulida.
+>
+> 🔧 **¿Por qué "Update I"?** Hay muchas más funcionalidades en desarrollo activo que expandirán el addon con el tiempo. Al lanzar en actualizaciones, puedo entregar contenido de calidad más pronto y recopilar valiosos comentarios de los jugadores.
+>
+> 💬 **¡Tu feedback importa!** Si juegas y compartes tu experiencia, me ayudarás a balancear mejor las mecánicas. Reporta errores, sugiere ajustes, o simplemente cuéntame qué piensas — la comunidad moldea este proyecto.
+
+---
+
 ## 📋 Tabla de Contenidos
 
 - [Resumen](#-resumen)
