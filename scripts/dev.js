@@ -1,7 +1,7 @@
 require('dotenv').config({ override: true });
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 
 // Directorio raíz del proyecto (padre de scripts/)
 const rootDir = path.join(__dirname, '..');

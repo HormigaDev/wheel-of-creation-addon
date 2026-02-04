@@ -1,30 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "description": "Wheel of Creation: [NAME]",
-        "name": "WoC [NAME] RP",
-        "uuid": "c3dc7a6d-1ef3-4f79-b226-b72e7bc7468b",
-        "version": [
-            0,
-            0,
-            1
-        ],
-        "min_engine_version": [
-            1,
-            21,
-            0
-        ]
+        "description": "Wheel of Creation",
+        "name": "Wheel of Creation RP",
+        "uuid": "b142028f-1015-4837-a30e-8c3a3bb0adef",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 21, 0]
     },
     "modules": [
         {
             "description": "Resources",
             "type": "resources",
-            "uuid": "f0b0fd2c-dc0a-4cce-9d11-87c4dc81f9e1",
-            "version": [
-                0,
-                0,
-                1
-            ]
+            "uuid": "8063edb5-1e6a-4774-9818-2a9f6db54d94",
+            "version": [0, 0, 1]
         }
     ]
 }

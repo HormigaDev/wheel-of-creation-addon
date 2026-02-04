@@ -1,1 +1,2 @@
-import './events/register';
+import './features/setup';
+import './features/items/InteractionControl';

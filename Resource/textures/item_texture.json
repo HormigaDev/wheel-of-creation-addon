@@ -1,5 +1,16 @@
 {
     "resource_pack_name": "woc_natural_trees",
     "texture_name": "atlas.items",
-    "texture_data": {}
+    "texture_data": {
+        "woc_fertilizer": { "textures": "textures/items/fertilizer" },
+        "woc_creative_fertilizer": { "textures": "textures/items/creative_fertilizer" },
+        "woc_crop_inspector": { "textures": "textures/items/crop_inspector" },
+        "woc_melon_seeds": { "textures": "textures/items/melon_seeds" },
+        "woc_pumpkin_seeds": { "textures": "textures/items/pumpkin_seeds" },
+        "woc_wheat_seeds": { "textures": "textures/items/wheat_seeds" },
+        "woc_beetroot_seeds": { "textures": "textures/items/beetroot_seeds" },
+        "woc_select_carrot": { "textures": "textures/items/select_carrot" },
+        "woc_select_potato": { "textures": "textures/items/select_potato" },
+        "woc_straw": { "textures": "textures/items/straw" }
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.0",
     "minecraft:block": {
         "description": {
             "identifier": "woc:farmland",
@@ -9,10 +9,14 @@
             "states": {
                 "woc:hydration": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                 "woc:fertilizer_level": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-            },
-            "tags": ["minecraft:dirt", "dirt", "minecraft:farmland", "farmland"]
+            }
         },
         "components": {
+            "tag:minecraft:dirt": {},
+            "tag:dirt": {},
+            "tag:minecraft:farmland": {},
+            "tag:farmland": {},
+
             "minecraft:collision_box": {
                 "origin": [-8, 0, -8],
                 "size": [16, 15, 16]
@@ -21,26 +25,27 @@
                 "origin": [-8, 0, -8],
                 "size": [16, 15, 16]
             },
-            "minecraft:geometry": "geometry.farmland",
+            "minecraft:geometry": "geometry.woc_farmland",
             "minecraft:material_instances": {
                 "*": {
                     "texture": "dirt",
                     "render_method": "opaque"
                 },
                 "up": {
-                    "texture": "farmland_dry",
+                    "texture": "woc_farmland_dry",
                     "render_method": "opaque"
                 }
             },
             "minecraft:custom_components": ["woc:farmland_logic"],
-            "minecraft:random_ticking": {},
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 0.6
             },
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 3.0
             },
-            "minecraft:map_color": "#966c4a"
+            "minecraft:map_color": "#966c4a",
+            "minecraft:display_name": "block.woc.farmland.name",
+            "minecraft:loot": "loot_tables/dirt.json"
         },
         "permutations": [
             {
@@ -52,7 +57,7 @@
                             "render_method": "opaque"
                         },
                         "up": {
-                            "texture": "farmland_wet",
+                            "texture": "woc_farmland_wet",
                             "render_method": "opaque"
                         }
                     }

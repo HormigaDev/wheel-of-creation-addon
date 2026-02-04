@@ -1,0 +1,54 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:column_sugar_cane",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.crop"
+            },
+            "states": {
+                "woc:quality": [0, 1],
+                "woc:produced_count": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            }
+        },
+        "components": {
+            "tag:minecraft:crop": {},
+            "tag:crop": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.woc_column_crop",
+            "minecraft:collision_box": {
+                "origin": [0, 0, 0],
+                "size": [0, 0, 0]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:material_instances": {
+                "*": { "texture": "woc_sugar_cane", "render_method": "alpha_test" }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": [
+                            "woc:farmland",
+                            "minecraft:sand",
+                            "minecraft:dirt",
+                            "minecraft:grass",
+                            "minecraft:podzol",
+                            "minecraft:red_sand",
+                            "minecraft:mud",
+                            "woc:column_sugar_cane"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.0 },
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:custom_components": ["woc:column_sugar_cane_logic"]
+        }
+    }
+}

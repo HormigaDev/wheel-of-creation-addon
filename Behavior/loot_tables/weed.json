@@ -1,0 +1,22 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                        "item": "minecraft:shears"
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "woc:straw",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

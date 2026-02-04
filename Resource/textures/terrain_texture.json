@@ -3,5 +3,192 @@
     "texture_name": "atlas.terrain",
     "padding": 8,
     "num_mip_levels": 4,
-    "texture_data": {}
+    "texture_data": {
+        "woc_farmland_dry": { "textures": "textures/blocks/farmland_dry" },
+        "woc_farmland_wet": { "textures": "textures/blocks/farmland_wet" },
+        // Trigo
+        "wheat_stage_0": { "textures": "textures/blocks/wheat_stage_0" },
+        "wheat_stage_1": { "textures": "textures/blocks/wheat_stage_1" },
+        "wheat_stage_2": { "textures": "textures/blocks/wheat_stage_2" },
+        "wheat_stage_3": { "textures": "textures/blocks/wheat_stage_3" },
+        "wheat_stage_4": { "textures": "textures/blocks/wheat_stage_4" },
+        "wheat_stage_5": { "textures": "textures/blocks/wheat_stage_5" },
+        "wheat_stage_6": { "textures": "textures/blocks/wheat_stage_6" },
+        "wheat_stage_7": { "textures": "textures/blocks/wheat_stage_7" },
+        // Trigo podrido
+        "wheat_stage_0_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_0_rotten" },
+        "wheat_stage_1_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_1_rotten" },
+        "wheat_stage_2_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_2_rotten" },
+        "wheat_stage_3_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_3_rotten" },
+        "wheat_stage_4_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_4_rotten" },
+        "wheat_stage_5_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_5_rotten" },
+        "wheat_stage_6_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_6_rotten" },
+        "wheat_stage_7_rotten": { "textures": "textures/blocks/crops/rotten/wheat_stage_7_rotten" },
+        // Trigo seco
+        "wheat_stage_0_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_0_dead" },
+        "wheat_stage_1_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_1_dead" },
+        "wheat_stage_2_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_2_dead" },
+        "wheat_stage_3_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_3_dead" },
+        "wheat_stage_4_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_4_dead" },
+        "wheat_stage_5_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_5_dead" },
+        "wheat_stage_6_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_6_dead" },
+        "wheat_stage_7_dead": { "textures": "textures/blocks/crops/dead/wheat_stage_7_dead" },
+        // Zanahorias
+        "carrots_stage_0": { "textures": "textures/blocks/carrots_stage_0" },
+        "carrots_stage_1": { "textures": "textures/blocks/carrots_stage_1" },
+        "carrots_stage_2": { "textures": "textures/blocks/carrots_stage_2" },
+        "carrots_stage_3": { "textures": "textures/blocks/carrots_stage_3" },
+        // Zanahorias podridas
+        "carrots_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/carrots_stage_0_rotten"
+        },
+        "carrots_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/carrots_stage_1_rotten"
+        },
+        "carrots_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/carrots_stage_2_rotten"
+        },
+        "carrots_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/carrots_stage_3_rotten"
+        },
+        // Zanahorias secas
+        "carrots_stage_0_dead": { "textures": "textures/blocks/crops/dead/carrots_stage_0_dead" },
+        "carrots_stage_1_dead": { "textures": "textures/blocks/crops/dead/carrots_stage_1_dead" },
+        "carrots_stage_2_dead": { "textures": "textures/blocks/crops/dead/carrots_stage_2_dead" },
+        "carrots_stage_3_dead": { "textures": "textures/blocks/crops/dead/carrots_stage_3_dead" },
+        // Papas
+        "potatoes_stage_0": { "textures": "textures/blocks/potatoes_stage_0" },
+        "potatoes_stage_1": { "textures": "textures/blocks/potatoes_stage_1" },
+        "potatoes_stage_2": { "textures": "textures/blocks/potatoes_stage_2" },
+        "potatoes_stage_3": { "textures": "textures/blocks/potatoes_stage_3" },
+        // Papas podridas
+        "potatoes_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/potatoes_stage_0_rotten"
+        },
+        "potatoes_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/potatoes_stage_1_rotten"
+        },
+        "potatoes_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/potatoes_stage_2_rotten"
+        },
+        "potatoes_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/potatoes_stage_3_rotten"
+        },
+        // Papas secas
+        "potatoes_stage_0_dead": { "textures": "textures/blocks/crops/dead/potatoes_stage_0_dead" },
+        "potatoes_stage_1_dead": { "textures": "textures/blocks/crops/dead/potatoes_stage_1_dead" },
+        "potatoes_stage_2_dead": { "textures": "textures/blocks/crops/dead/potatoes_stage_2_dead" },
+        "potatoes_stage_3_dead": { "textures": "textures/blocks/crops/dead/potatoes_stage_3_dead" },
+        // Remolachas
+        "beetroots_stage_0": { "textures": "textures/blocks/beetroots_stage_0" },
+        "beetroots_stage_1": { "textures": "textures/blocks/beetroots_stage_1" },
+        "beetroots_stage_2": { "textures": "textures/blocks/beetroots_stage_2" },
+        "beetroots_stage_3": { "textures": "textures/blocks/beetroots_stage_3" },
+        // Remolachas podridas
+        "beetroots_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/beetroots_stage_0_rotten"
+        },
+        "beetroots_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/beetroots_stage_1_rotten"
+        },
+        "beetroots_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/beetroots_stage_2_rotten"
+        },
+        "beetroots_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/beetroots_stage_3_rotten"
+        },
+        // Remolachas secas
+        "beetroots_stage_0_dead": {
+            "textures": "textures/blocks/crops/dead/beetroots_stage_0_dead"
+        },
+        "beetroots_stage_1_dead": {
+            "textures": "textures/blocks/crops/dead/beetroots_stage_1_dead"
+        },
+        "beetroots_stage_2_dead": {
+            "textures": "textures/blocks/crops/dead/beetroots_stage_2_dead"
+        },
+        "beetroots_stage_3_dead": {
+            "textures": "textures/blocks/crops/dead/beetroots_stage_3_dead"
+        },
+        "pumpkin_stage_0": { "textures": "textures/blocks/crops/pumpkin_stage_0" },
+        "pumpkin_stage_1": { "textures": "textures/blocks/crops/pumpkin_stage_1" },
+        "pumpkin_stage_2": { "textures": "textures/blocks/crops/pumpkin_stage_2" },
+        "pumpkin_stage_3": { "textures": "textures/blocks/crops/pumpkin_stage_3" },
+        "pumpkin_stage_4": { "textures": "textures/blocks/crops/pumpkin_stage_4" },
+        "pumpkin_stage_5": { "textures": "textures/blocks/crops/pumpkin_stage_5" },
+        "pumpkin_stage_6": { "textures": "textures/blocks/crops/pumpkin_stage_6" },
+        "pumpkin_stage_7": { "textures": "textures/blocks/crops/pumpkin_stage_7" },
+
+        "melon_stage_0": { "textures": "textures/blocks/crops/melon_stage_0" },
+        "melon_stage_1": { "textures": "textures/blocks/crops/melon_stage_1" },
+        "melon_stage_2": { "textures": "textures/blocks/crops/melon_stage_2" },
+        "melon_stage_3": { "textures": "textures/blocks/crops/melon_stage_3" },
+        "melon_stage_4": { "textures": "textures/blocks/crops/melon_stage_4" },
+        "melon_stage_5": { "textures": "textures/blocks/crops/melon_stage_5" },
+        "melon_stage_6": { "textures": "textures/blocks/crops/melon_stage_6" },
+        "melon_stage_7": { "textures": "textures/blocks/crops/melon_stage_7" },
+
+        "pumpkin_stage_0_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_0_dead" },
+        "pumpkin_stage_1_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_1_dead" },
+        "pumpkin_stage_2_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_2_dead" },
+        "pumpkin_stage_3_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_3_dead" },
+        "pumpkin_stage_4_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_4_dead" },
+        "pumpkin_stage_5_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_5_dead" },
+        "pumpkin_stage_6_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_6_dead" },
+        "pumpkin_stage_7_dead": { "textures": "textures/blocks/crops/dead/pumpkin_stage_7_dead" },
+
+        "melon_stage_0_dead": { "textures": "textures/blocks/crops/dead/melon_stage_0_dead" },
+        "melon_stage_1_dead": { "textures": "textures/blocks/crops/dead/melon_stage_1_dead" },
+        "melon_stage_2_dead": { "textures": "textures/blocks/crops/dead/melon_stage_2_dead" },
+        "melon_stage_3_dead": { "textures": "textures/blocks/crops/dead/melon_stage_3_dead" },
+        "melon_stage_4_dead": { "textures": "textures/blocks/crops/dead/melon_stage_4_dead" },
+        "melon_stage_5_dead": { "textures": "textures/blocks/crops/dead/melon_stage_5_dead" },
+        "melon_stage_6_dead": { "textures": "textures/blocks/crops/dead/melon_stage_6_dead" },
+        "melon_stage_7_dead": { "textures": "textures/blocks/crops/dead/melon_stage_7_dead" },
+
+        "pumpkin_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_0_rotten"
+        },
+        "pumpkin_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_1_rotten"
+        },
+        "pumpkin_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_2_rotten"
+        },
+        "pumpkin_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_3_rotten"
+        },
+        "pumpkin_stage_4_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_4_rotten"
+        },
+        "pumpkin_stage_5_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_5_rotten"
+        },
+        "pumpkin_stage_6_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_6_rotten"
+        },
+        "pumpkin_stage_7_rotten": {
+            "textures": "textures/blocks/crops/rotten/pumpkin_stage_7_rotten"
+        },
+
+        "melon_stage_0_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_0_rotten" },
+        "melon_stage_1_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_1_rotten" },
+        "melon_stage_2_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_2_rotten" },
+        "melon_stage_3_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_3_rotten" },
+        "melon_stage_4_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_4_rotten" },
+        "melon_stage_5_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_5_rotten" },
+        "melon_stage_6_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_6_rotten" },
+        "melon_stage_7_rotten": { "textures": "textures/blocks/crops/rotten/melon_stage_7_rotten" },
+
+        "pumpkin_connected": { "textures": "textures/blocks/crops/pumpkin_connected" },
+        "melon_connected": { "textures": "textures/blocks/crops/melon_connected" },
+
+        "woc_composter_side": { "textures": "textures/blocks/better_composter_side" },
+        "woc_composter_top": { "textures": "textures/blocks/composter_top" },
+        "woc_composter_bottom": { "textures": "textures/blocks/composter_bottom" },
+        "woc_compost": { "textures": "textures/blocks/compost" },
+        "woc_compost_ready": { "textures": "textures/blocks/compost_ready" },
+        "woc_sugar_cane": { "textures": "textures/blocks/reeds" },
+        "woc_sugar_cane_dead": { "textures": "textures/blocks/crops/dead/sugar_cane_dead" }
+    }
 }

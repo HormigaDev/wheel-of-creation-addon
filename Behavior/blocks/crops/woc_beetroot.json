@@ -1,0 +1,95 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:beetroots",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.crop"
+            },
+            "states": {
+                "woc:growth_stage": [0, 1, 2, 3],
+                "woc:quality": [0, 1]
+            }
+        },
+        "components": {
+            "tag:minecraft:crop": {},
+            "tag:crop": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.woc_crop",
+            "minecraft:collision_box": {
+                "origin": [0, 0, 0],
+                "size": [0, 0, 0]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 3, 16]
+            },
+            "minecraft:material_instances": {
+                "*": { "texture": "beetroots_stage_0", "render_method": "alpha_test" }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": ["woc:farmland"]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.0 },
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:custom_components": ["woc:beetroots_logic"]
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:growth_stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "beetroots_stage_0", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 4, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "beetroots_stage_1", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 5, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "beetroots_stage_2", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "beetroots_stage_3", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 10, 16]
+                    }
+                }
+            }
+        ]
+    }
+}

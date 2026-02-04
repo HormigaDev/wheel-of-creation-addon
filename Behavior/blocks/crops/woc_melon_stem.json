@@ -1,0 +1,197 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:melon_stem",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.crop"
+            },
+            "states": {
+                "woc:growth_stage": [0, 1, 2, 3, 4, 5, 6, 7],
+                "woc:quality": [0, 1],
+                "woc:conn_n": [false, true],
+                "woc:conn_s": [false, true],
+                "woc:conn_e": [false, true],
+                "woc:conn_w": [false, true],
+                "woc:connected": [false, true],
+                "woc:produced_count": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            }
+        },
+        "components": {
+            "tag:minecraft:crop": {},
+            "tag:crop": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": {
+                "identifier": "geometry.woc_stem_crop",
+                "bone_visibility": {
+                    "conn_stem": "query.block_state('woc:connected')",
+                    "stem": "query.block_state('woc:connected') == false",
+                    "conn_n": "query.block_state('woc:conn_n') && query.block_state('woc:connected')",
+                    "conn_s": "query.block_state('woc:conn_s') && query.block_state('woc:connected')",
+                    "conn_e": "query.block_state('woc:conn_e') && query.block_state('woc:connected')",
+                    "conn_w": "query.block_state('woc:conn_w') && query.block_state('woc:connected')"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [0, 0, 0],
+                "size": [0, 0, 0]
+            },
+            "minecraft:selection_box": {
+                "origin": [-1, 0, -1],
+                "size": [4, 3, 4]
+            },
+            "minecraft:material_instances": {
+                "*": { "texture": "melon_stage_0", "render_method": "alpha_test" }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": ["woc:farmland"]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.0 },
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:custom_components": ["woc:melon_stem_logic"]
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:growth_stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_0", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 3, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_1", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 4, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_2", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 8, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_3", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 8, 4]
+                    }
+                }
+            },
+
+            {
+                "condition": "query.block_state('woc:growth_stage') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_4", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 9, 4]
+                    }
+                }
+            },
+
+            {
+                "condition": "query.block_state('woc:growth_stage') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_5", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 11, 4]
+                    }
+                }
+            },
+
+            {
+                "condition": "query.block_state('woc:growth_stage') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_6", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 12, 4]
+                    }
+                }
+            },
+
+            {
+                "condition": "query.block_state('woc:growth_stage') == 7 && query.block_state('woc:connected') == false",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_7", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 15, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:growth_stage') == 7 && query.block_state('woc:connected') == true",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": { "texture": "melon_stage_7", "render_method": "alpha_test" }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-1, 0, -1],
+                        "size": [4, 10, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:conn_n') || query.block_state('woc:conn_s') || query.block_state('woc:conn_e') || query.block_state('woc:conn_w')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.woc_stem_crop",
+                        "bone_visibility": {
+                            "conn_stem": "query.block_state('woc:connected')",
+                            "stem": "query.block_state('woc:connected') == false",
+                            "conn_n": "query.block_state('woc:conn_n') && query.block_state('woc:connected')",
+                            "conn_s": "query.block_state('woc:conn_s') && query.block_state('woc:connected')",
+                            "conn_e": "query.block_state('woc:conn_e') && query.block_state('woc:connected')",
+                            "conn_w": "query.block_state('woc:conn_w') && query.block_state('woc:connected')"
+                        }
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "melon_connected",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

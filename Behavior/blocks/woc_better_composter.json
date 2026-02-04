@@ -1,0 +1,114 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:better_composter",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "woc:brown": [0, 1, 2, 3, 4],
+                "woc:green": [0, 1, 2, 3, 4],
+                "woc:level": [0, 1, 2, 3, 4],
+                "woc:ready": [false, true]
+            }
+        },
+        "components": {
+            "tag:minecraft:wood": {},
+            "tag:wood": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:collision_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.woc_better_composter",
+                "bone_visibility": {
+                    "lvl_1": "query.block_state('woc:level') == 1",
+                    "lvl_2": "query.block_state('woc:level') == 2",
+                    "lvl_3": "query.block_state('woc:level') == 3",
+                    "lvl_4": "query.block_state('woc:level') == 4"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "woc_composter_side",
+                    "render_method": "opaque"
+                },
+                "woc_side": {
+                    "texture": "woc_composter_side",
+                    "render_method": "opaque"
+                },
+                "woc_top": {
+                    "texture": "woc_composter_top",
+                    "render_method": "opaque"
+                },
+                "woc_bottom": {
+                    "texture": "woc_composter_bottom",
+                    "render_method": "opaque"
+                },
+                "compost": {
+                    "texture": "woc_compost",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:custom_components": ["woc:better_composter_logic"],
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3.0
+            },
+            "minecraft:map_color": "#80604a",
+            "minecraft:display_name": "block.woc.better_composter.name"
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:level') == 1 || query.block_state('woc:level') == 2 || query.block_state('woc:level') == 3 || query.block_state('woc:level') == 4",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.woc_better_composter",
+                        "bone_visibility": {
+                            "lvl_1": "query.block_state('woc:level') == 1",
+                            "lvl_2": "query.block_state('woc:level') == 2",
+                            "lvl_3": "query.block_state('woc:level') == 3",
+                            "lvl_4": "query.block_state('woc:level') == 4"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:ready')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_composter_side",
+                            "render_method": "opaque"
+                        },
+                        "woc_side": {
+                            "texture": "woc_composter_side",
+                            "render_method": "opaque"
+                        },
+                        "woc_top": {
+                            "texture": "woc_composter_top",
+                            "render_method": "opaque"
+                        },
+                        "woc_bottom": {
+                            "texture": "woc_composter_bottom",
+                            "render_method": "opaque"
+                        },
+                        "compost": {
+                            "texture": "woc_compost_ready",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

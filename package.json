@@ -1,6 +1,6 @@
 {
-    "name": "woc_natural_order",
-    "version": "0.1.0",
+    "name": "wheel_of_creation",
+    "version": "0.0.1",
     "description": "",
     "scripts": {
         "dev": "node ./scripts/dev.js",
@@ -10,13 +10,14 @@
     "keywords": [
         "minecraft",
         "scripts",
-        "minecraft-scripts"
+        "minecraft-scripts",
+        "minecraft-addons"
     ],
     "author": {
         "email": "hormigadev7@gmail.com",
         "name": "HormigaDev"
     },
-    "license": "ISC",
+    "license": "GPL-3.0-only",
     "type": "commonjs",
     "dependencies": {
         "@minecraft/server": "^2.4.0",
