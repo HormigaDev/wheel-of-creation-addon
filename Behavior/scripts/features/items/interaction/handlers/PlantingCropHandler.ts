@@ -7,6 +7,7 @@ import {
     MIN_HYDRATION_FOR_SUGARCANE,
 } from '../config';
 import { consumeItemInHand, hasAdjacentWater, getFarmlandHydration } from '../utils';
+import { getAtmosphericHumidity } from '../../../../config';
 
 /**
  * Handler para plantar cultivos desde semillas
@@ -32,7 +33,12 @@ export class PlantingCropHandler implements InteractionHandler {
 
         // Convertir farmland vanilla a WoC si es necesario
         if (block.typeId === 'minecraft:farmland') {
+            const biome = block.dimension.getBiome(block.location);
+            const initialHydration = getAtmosphericHumidity(biome.id, block.location);
+
             block.setType('woc:farmland');
+            const perm = block.permutation.withState('woc:hydration' as any, initialHydration);
+            block.setPermutation(perm);
         }
 
         // Colocar el cultivo

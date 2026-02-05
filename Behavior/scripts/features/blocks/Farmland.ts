@@ -27,7 +27,6 @@ function updateFarmlandLogic(block: Block) {
     const location = block.location;
 
     let currentHydration = (block.permutation.getState('woc:hydration' as any) as number) ?? 0;
-    let currentEvaporation = (block.permutation.getState('woc:evaporate' as any) as number) ?? 0;
 
     let targetHydration = getAtmosphericHumidity(biome.id, location);
     const risks = getBiomeRisks(biome.id);
@@ -76,10 +75,7 @@ function updateFarmlandLogic(block: Block) {
             } else if (targetHydration < currentHydration) {
                 newHydration--;
             }
-
-            if (!isArid && currentEvaporation > 0) currentEvaporation--;
         }
-        if (isArid && Math.random() < 0.1) currentEvaporation++;
     } else {
         if (targetHydration > currentHydration) {
             newHydration++;
