@@ -14,7 +14,7 @@
 
 > 🎮 **Inspirado no [TerraFirmaCraft](https://terrafirmacraft.com/)** — Este addon se inspira em algumas mecânicas do popular mod de Java TerraFirmaCraft. No entanto, **NÃO** é um port oficial. Todos os sistemas foram completamente reimaginados e reinterpretados para o Minecraft Bedrock Edition por **HormigaDev**.
 
-[SCREENSHOT 1 - Imagem heroica mostrando uma fazenda com várias plantações em diferentes estágios de crescimento]
+![Screenshot1](../assets/portada.png)
 
 </div>
 
@@ -78,8 +78,6 @@ Esta é a **primeira versão** da série Agriculture Update. Fique atento para a
 - 🌿 **Ervas daninhas competem** — Plantações negligenciadas podem ser dominadas por espécies invasoras.
 - 🍂 **Culturas podem falhar** — Seca, apodrecimento e extremos de temperatura podem matar suas plantas.
 - ⏰ **Crescimento Offline** — As plantações crescem mesmo com chunks descarregados! Explore livremente!
-
-[SCREENSHOT 2 - Comparação lado a lado: Fazenda Vanilla vs Fazenda Natural Order]
 
 ---
 
@@ -173,7 +171,7 @@ Dois níveis de qualidade para sementes:
 </tr>
 </table>
 
-[SCREENSHOT 3 - Inspetor de Culturas mostrando estatísticas detalhadas de uma planta saudável]
+![Screenshot2](../assets/s2.png)
 
 ---
 
@@ -186,8 +184,6 @@ Dois níveis de qualidade para sementes:
 3. **Verifique as Condições** — Fabrique um **Inspetor de Culturas** para analisar o solo e o clima.
 4. **Escolha com Sabedoria** — Plante culturas adequadas à temperatura e umidade do seu bioma.
 5. **Mantenha sua Fazenda** — Aplique fertilizante, garanta fontes de água e monitore a saúde.
-
-[SCREENSHOT 4 - Jogador usando uma enxada para criar terra arada]
 
 ### Dicas Rápidas para Iniciantes
 
@@ -225,7 +221,8 @@ Cada bioma no Minecraft agora tem um perfil climático completo que afeta a agri
 | ❄️ Picos Gelados |    0    |    -25    |  25%  |  0%   |  0%   |     0%      |
 | 🍄 Ilha Cogumelo |   10    |    20     |  0%   |  5%   |  8%   |     90%     |
 
-[SCREENSHOT 5 - Mesma planta no deserto vs selva mostrando diferentes estados de saúde]
+![Screenshot3](../assets/s3.png)
+![Screenshot4](../assets/s4.png)
 
 ---
 
@@ -246,8 +243,6 @@ O bloco de **Terra Arada** customizado (`woc:farmland`) é a base da agricultura
 | :-----------------: | ------------------------------ |
 |         0-7         | Textura seca (aspecto rachado) |
 |        8-10         | Textura úmida (solo escuro)    |
-
-[SCREENSHOT 6 - Terra arada mostrando texturas seca vs úmida lado a lado]
 
 #### Sistema de Fertilizante
 
@@ -279,8 +274,6 @@ _Plantações tradicionais em fileiras que crescem em estágios verticais_
 | 🥔 Batatas    |    3     |   60 dias   |     4     |     7     |  10-24°C   | Savana, Colinas, Mesa     |
 | 🫒 Beterrabas |    3     |   24 dias   |     2     |     9     |  -5-18°C   | Neve, Gelo, Frio          |
 
-[SCREENSHOT 7 - Todas as culturas base em vários estágios de crescimento]
-
 #### 2️⃣ Culturas de Caule
 
 _Produzem múltiplos frutos ao longo de sua vida_
@@ -297,7 +290,8 @@ _Produzem múltiplos frutos ao longo de sua vida_
 3. O caule continua produzindo até atingir sua vida útil máxima.
 4. Sementes de qualidade produzem mais frutos por um período maior.
 
-[SCREENSHOT 8 - Caule de abóbora maduro com fruto surgindo]
+![Screenshot8](../assets/s8.png)
+![Screenshot9](../assets/s9.png)
 
 #### 3️⃣ Culturas de Coluna
 
@@ -314,7 +308,7 @@ _Plantas de crescimento vertical com requisitos únicos_
 - Requer fonte de água adjacente (ou terra arada com alta hidratação).
 - Cada raiz pode produzir segmentos limitados antes de morrer.
 
-[SCREENSHOT 9 - Cana-de-açúcar crescendo perto de uma fonte de água]
+![Screenshot5](../assets/s5.png)
 
 ---
 
@@ -370,7 +364,9 @@ Uma das funcionalidades mais impactantes é o sistema de **qualidade genética**
 
 > 💡 **Dica Pro**: Encontre uma vila cedo e proteja seus Fazendeiros! Eles são a chave para o sucesso agrícola.
 
-[SCREENSHOT 10 - Comparação de colheita lado a lado: Rendimento Selvagem vs Selecionado]
+#### Comparação entre sementes selvagens e sementes selecionadas
+
+![Screenshot10](../assets/s10.png)
 
 ---
 
@@ -378,7 +374,8 @@ Uma das funcionalidades mais impactantes é o sistema de **qualidade genética**
 
 Uma revisão completa do sistema de compostagem que produz **Fertilizante**:
 
-[SCREENSHOT 11 - Composteira Melhorada em ação com materiais sendo adicionados]
+![BetterComposterCrafting](../assets/better_composter_crafting.png)
+![Screenshot11](../assets/s11.png)
 
 #### Como Funciona
 
@@ -458,7 +455,8 @@ A Composteira Melhorada requer **insumos equilibrados** de dois tipos de materia
 
 O **Inspetor de Culturas** é uma ferramenta essencial. Segure-o na mão principal para ver informações em tempo real na barra de ação.
 
-[SCREENSHOT 12 - Jogador segurando o Inspetor de Culturas analisando alvos]
+![Screenshot6](../assets/s6.png)
+![Screenshot7](../assets/s7.png)
 
 #### Informações Exibidas
 
@@ -524,7 +522,7 @@ Bioma: Deserto   45°C
 
 #### Receita de Fabricação
 
-[SCREENSHOT 13 - Receita de fabricação do Inspetor de Culturas]
+![CropInspectorCrafting](../assets/crop_inspector_crafting.png)
 
 ---
 
@@ -718,7 +716,7 @@ Use esta tabela para planejar suas fazendas com base na localização:
 
 \*Requer sistema de irrigação
 
-[SCREENSHOT 14 - Mapa do mundo mostrando zonas de agricultura ideais]
+![Screenshot1](../assets/s1.png)
 
 ---
 
@@ -778,7 +776,9 @@ Use esta tabela para planejar suas fazendas com base na localização:
 ### Requisitos
 
 - Minecraft Bedrock Edition **1.21.0** ou superior.
-- **Recursos Experimentais**: Holiday Creator Features (ativados automaticamente).
+- **Recursos Experimentais**: Próximas Funcionalidades de Criador.
+
+![ExperimentalFeatures](../assets/experimental_features.png)
 
 ### Passos para Instalação
 
@@ -787,8 +787,6 @@ Use esta tabela para planejar suas fazendas com base na localização:
 3. Crie um novo mundo ou adicione a um mundo existente.
 4. Ative o **Behavior Pack** e o **Resource Pack**.
 5. Garanta que ambos os pacotes mostrem a versão `0.0.1` ou superior.
-
-[SCREENSHOT 15 - Configurações do mundo mostrando o addon ativado]
 
 ### ⚠️ Notas de Compatibilidade
 
@@ -965,6 +963,6 @@ _Última Atualização: Fevereiro 2026 | Versão 0.0.1 | Agriculture Update I_
 
 **Feito com ❤️ por HormigaDev — Open Source sob GPL-3.0**
 
-[SCREENSHOT 16 - Pôr do sol maravilhoso sobre uma fazenda próspera - imagem de encerramento]
+![ScreenshotEnd](../assets/end.png)
 
 </div>

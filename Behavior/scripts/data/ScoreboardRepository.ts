@@ -46,7 +46,14 @@ export class ScoreboardRepository {
 
     private static getKey(block: Block): string {
         const dim = this.DIMENSION_MAP[block.dimension.id] ?? 0;
-        return `${Math.floor(block.x)}:${Math.floor(block.y)}:${Math.floor(block.z)}:${dim}`;
+        const x = Math.floor(block.x);
+        const y = Math.floor(block.y);
+        const z = Math.floor(block.z);
+        // Uso '_' para negativos y prefijo 'b' para que siempre empiece con letra
+        const xStr = x < 0 ? `_${-x}` : `${x}`;
+        const yStr = y < 0 ? `_${-y}` : `${y}`;
+        const zStr = z < 0 ? `_${-z}` : `${z}`;
+        return `b${xStr}:${yStr}:${zStr}:${dim}`;
     }
 
     static save(block: Block, lastTick: number, progress: number, hydrationCache: number): boolean {
@@ -105,7 +112,6 @@ export class ScoreboardRepository {
 
             return { lastTick, progress, hydration };
         } catch (err) {
-            world.sendMessage(`Error: ${err}`);
             logger.error('Failed to load scoreboard data', err, 'ScoreboardRepository.load');
             return null;
         }
@@ -113,7 +119,6 @@ export class ScoreboardRepository {
 
     static delete(block: Block): boolean {
         if (!this.getObjectives()) {
-            world.sendMessage('Error al obtener objetivos');
             logger.warn('Failed to get objectives for delete operation', 'ScoreboardRepository');
             return false;
         }

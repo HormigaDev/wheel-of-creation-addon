@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "description": "Wheel of Creation",
-        "name": "Wheel of Creation BP",
+        "description": "Wheel of Creation: Agriculture Update",
+        "name": "Wheel of Creation: BP",
         "uuid": "6e3ab995-f6cb-49f0-90d4-db99997c02ed",
         "version": [0, 0, 1],
         "min_engine_version": [1, 21, 0]

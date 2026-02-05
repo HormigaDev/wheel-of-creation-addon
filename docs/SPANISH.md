@@ -14,7 +14,7 @@
 
 > 🎮 **Inspirado en [TerraFirmaCraft](https://terrafirmacraft.com/)** — Este addon se inspira en algunas mecánicas del popular mod de Java TerraFirmaCraft. Sin embargo, **NO** es un port oficial. Todos los sistemas han sido completamente reimaginados y reinterpretados para Minecraft Bedrock Edition por **HormigaDev**.
 
-[SCREENSHOT 1 - Imagen principal que muestra una granja con varios cultivos en diferentes etapas de crecimiento]
+![Screenshot1](../assets/portada.png)
 
 </div>
 
@@ -78,8 +78,6 @@ Esta es la **primera versión** de la serie Agriculture Update. Mantente atento 
 - 🌿 **La maleza compite** — Los cultivos descuidados pueden ser invadidos por plantas invasoras.
 - 🍂 **Los cultivos pueden fallar** — La sequía, la podredumbre y las temperaturas extremas pueden matar tus plantas.
 - ⏰ **Crecimiento Offline** — ¡Los cultivos crecen incluso con los chunks descargados! ¡Explora libremente!
-
-[SCREENSHOT 2 - Comparación lado a lado: Granja Vanilla vs Granja Natural Order]
 
 ---
 
@@ -173,7 +171,7 @@ Dos niveles de calidad para las semillas:
 </tr>
 </table>
 
-[SCREENSHOT 3 - Inspector de Cultivos mostrando estadísticas detalladas de un cultivo sano]
+![Screenshot2](../assets/s2.png)
 
 ---
 
@@ -186,8 +184,6 @@ Dos niveles de calidad para las semillas:
 3. **Revisa las Condiciones** — Fabrica un **Inspector de Cultivos** para analizar el suelo y el clima.
 4. **Elige Sabiamente** — Planta cultivos adecuados para la temperatura y humedad de tu bioma.
 5. **Mantén tu Granja** — Aplica fertilizante, asegura fuentes de agua y monitorea la salud.
-
-[SCREENSHOT 4 - Jugador usando una azada para crear tierra de cultivo]
 
 ### Consejos Rápidos para Principiantes
 
@@ -225,7 +221,8 @@ Cada bioma en Minecraft tiene ahora un perfil climático completo que afecta al 
 | ❄️ Picos Helados  |    0    |    -25    |  25%  |  0%   |   0%   |      0%      |
 | 🍄 Isla Champiñón |   10    |    20     |  0%   |  5%   |   8%   |     90%      |
 
-[SCREENSHOT 5 - Mismo cultivo plantado en desierto vs jungla mostrando diferente salud]
+![Screenshot3](../assets/s3.png)
+![Screenshot3](../assets/s4.png)
 
 ---
 
@@ -246,8 +243,6 @@ El bloque de **Tierra de Cultivo** personalizado (`woc:farmland`) es la base de 
 | :------------------: | -------------------------------- |
 |         0-7          | Textura seca (aspecto agrietado) |
 |         8-10         | Textura húmeda (suelo oscuro)    |
-
-[SCREENSHOT 6 - Tierra de cultivo mostrando texturas seca y húmeda lado a lado]
 
 #### Sistema de Fertilizante
 
@@ -279,8 +274,6 @@ _Cultivos tradicionales en hileras que crecen en etapas verticales_
 | 🥔 Patatas    |   3    |   60 días    |     4     |     7     |  10-24°C   | Sabana, Colinas, Mesa        |
 | 🫒 Remolachas |   3    |   24 días    |     2     |     9     |  -5-18°C   | Nieve, Hielo, Frío           |
 
-[SCREENSHOT 7 - Todos los cultivos base en varias etapas de crecimiento]
-
 #### 2️⃣ Cultivos de Tallo
 
 _Producen múltiples frutos a lo largo de su vida_
@@ -297,7 +290,8 @@ _Producen múltiples frutos a lo largo de su vida_
 3. El tallo sigue produciendo hasta alcanzar su vida útil máxima.
 4. Las semillas de calidad producen más frutos durante un período más largo.
 
-[SCREENSHOT 8 - Tallo de calabaza maduro con fruto apareciendo]
+![Screenshot8](../assets/s8.png)
+![Screenshot8](../assets/s9.png)
 
 #### 3️⃣ Cultivos de Columna
 
@@ -314,7 +308,7 @@ _Plantas de crecimiento vertical con requisitos únicos_
 - Requiere fuente de agua adyacente (o tierra de cultivo con alta hidratación).
 - Cada raíz puede producir segmentos limitados antes de morir.
 
-[SCREENSHOT 9 - Caña de azúcar creciendo cerca de una fuente de agua]
+![Screenshot5](../assets/s5.png)
 
 ---
 
@@ -370,7 +364,9 @@ Una de las características más importantes es el sistema de **calidad genétic
 
 > 💡 **Consejo Pro**: ¡Encuentra una aldea pronto y protege a tus Agricultores! Son la clave del éxito agrícola.
 
-[SCREENSHOT 10 - Comparación de cosecha lado a lado: Rendimiento Silvestre vs Selecto]
+#### Comparación entre semillas silvestre y semillas selectas
+
+![Screenshot10](../assets/s10.png)
 
 ---
 
@@ -378,7 +374,8 @@ Una de las características más importantes es el sistema de **calidad genétic
 
 Un rediseño completo del sistema de compostaje que produce **Fertilizante**:
 
-[SCREENSHOT 11 - Compostador Mejorado en acción con materiales siendo añadidos]
+![BetterComposterCrafting](../assets/better_composter_crafting.png)
+![Screenshot11](../assets/s11.png)
 
 #### Cómo Funciona
 
@@ -458,7 +455,8 @@ Llenar Ambos Lados Usar Polvo de Hueso Recoger Fertilizante
 
 El **Inspector de Cultivos** es una herramienta esencial para cualquier granjero serio. Sostenlo en tu mano principal para ver información en tiempo real en la barra de acción.
 
-[SCREENSHOT 12 - Jugador sosteniendo el Inspector de Cultivos mirando diferentes objetivos]
+![Screenshot6](../assets/s6.png)
+![Screenshot6](../assets/s7.png)
 
 #### Información Mostrada
 
@@ -524,7 +522,7 @@ Trigo Muerto
 
 #### Receta de Fabricación
 
-[SCREENSHOT 13 - Receta de fabricación del Inspector de Cultivos]
+![CropInspectorCrafting](../assets/crop_inspector_crafting.png)
 
 ---
 
@@ -718,7 +716,7 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 
 \*Requiere sistema de irrigación
 
-[SCREENSHOT 14 - Mapa del mundo mostrando zonas de cultivo óptimas]
+![Screenshot1](../assets/s1.png)
 
 ---
 
@@ -778,7 +776,8 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 ### Requisitos
 
 - Minecraft Bedrock Edition **1.21.0** o superior.
-- **Funciones Experimentales**: Próximas funciones de creador (se activan automáticamente).
+- **Funciones Experimentales**: Próximas funciones de creador.
+  ![ExperimentalFeatures](../assets/experimental_features.png)
 
 ### Pasos de Instalación
 
@@ -787,8 +786,6 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 3. Crea un mundo nuevo o añádelo a uno existente.
 4. Activa el **Behavior Pack** (Pack de Comportamiento) y el **Resource Pack** (Pack de Recursos).
 5. Asegúrate de que ambos packs muestren la versión `0.0.1` o superior.
-
-[SCREENSHOT 15 - Ajustes del mundo mostrando el addon activado]
 
 ### ⚠️ Notas de Compatibilidad
 
@@ -970,6 +967,6 @@ _Última actualización: Febrero 2026 | Versión 0.0.1 | Agriculture Update I_
 
 **Hecho con ❤️ por HormigaDev — Código abierto bajo GPL-3.0**
 
-[SCREENSHOT 16 - Hermoso atardecer sobre una granja próspera - imagen de cierre]
+![ScreenshotEnd](../assets/end.png)
 
 </div>

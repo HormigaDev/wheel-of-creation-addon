@@ -16,7 +16,7 @@
 
 > 🎮 **Inspired by [TerraFirmaCraft](https://terrafirmacraft.com/)** — This addon takes inspiration from some mechanics of the popular Java mod TerraFirmaCraft. However, this is **NOT** an official port. All systems have been completely reimagined and reinterpreted for Minecraft Bedrock Edition by **HormigaDev**.
 
-[SCREENSHOT 1 - Hero image showing a farm with various crops in different growth stages]
+![Screenshot1](assets/portada.png)
 
 </div>
 
@@ -80,8 +80,6 @@ This is the **first release** of the Agriculture Update series. Stay tuned for *
 - 🌿 **Weeds compete** — Neglected crops can be overtaken by invasive weeds
 - 🍂 **Crops can fail** — Drought, rot, and temperature extremes can kill your plants
 - ⏰ **Offline Growth** — Crops grow even when chunks are unloaded! Go explore freely!
-
-[SCREENSHOT 2 - Side by side comparison: Vanilla farm vs Natural Order farm]
 
 ---
 
@@ -175,7 +173,7 @@ Two quality tiers for seeds:
 </tr>
 </table>
 
-[SCREENSHOT 3 - Crop Inspector showing detailed stats of a healthy crop]
+![Screenshot2](assets/s2.png)
 
 ---
 
@@ -188,8 +186,6 @@ Two quality tiers for seeds:
 3. **Check Conditions** — Craft a **Crop Inspector** to analyze soil and climate
 4. **Choose Wisely** — Plant crops suited to your biome's temperature and humidity
 5. **Maintain Your Farm** — Apply fertilizer, ensure water sources, and monitor health
-
-[SCREENSHOT 4 - Player using a hoe to create farmland]
 
 ### Quick Tips for Beginners
 
@@ -227,7 +223,8 @@ Each biome in Minecraft now has a complete climate profile that affects farming:
 | ❄️ Frozen Peaks    |    0     |    -25    |  25%  | 0%  |  0%   |     0%     |
 | 🍄 Mushroom Island |    10    |    20     |  0%   | 5%  |  8%   |    90%     |
 
-[SCREENSHOT 5 - Same crop planted in desert vs jungle biome showing different health]
+![Screenshot3](assets/s3.png)
+![Screenshot4](assets/s4.png)
 
 ---
 
@@ -248,8 +245,6 @@ The custom **Farmland Block** (`woc:farmland`) is the foundation of farming. It 
 | :-------------: | -------------------------------- |
 |       0-7       | Dry texture (cracked appearance) |
 |      8-10       | Wet texture (dark, moist soil)   |
-
-[SCREENSHOT 6 - Farmland showing dry vs wet textures side by side]
 
 #### Fertilizer System
 
@@ -281,8 +276,6 @@ _Traditional row crops that grow in vertical stages_
 | 🥔 Potatoes  |   3    |   60 days   |     4     |     7     |  10-24°C   | Savanna, Hills, Mesa      |
 | 🫒 Beetroots |   3    |   24 days   |     2     |     9     |  -5-18°C   | Snow, Ice, Cold           |
 
-[SCREENSHOT 7 - All base crops at various growth stages]
-
 #### 2️⃣ Stem Crops
 
 _Produce multiple fruits over their lifetime_
@@ -299,7 +292,8 @@ _Produce multiple fruits over their lifetime_
 3. Stem continues producing until it reaches max lifetime
 4. Quality seeds produce more fruits over a longer period
 
-[SCREENSHOT 8 - Mature pumpkin stem with fruit spawning]
+![Screenshot8](assets/s8.png)
+![Screenshot9](assets/s9.png)
 
 #### 3️⃣ Column Crops
 
@@ -316,7 +310,7 @@ _Vertical growing plants with unique requirements_
 - Requires adjacent water source (or high hydration farmland)
 - Each root can produce limited segments before dying
 
-[SCREENSHOT 9 - Sugar cane growing near water source]
+![Screenshot5](assets/s5.png)
 
 ---
 
@@ -372,7 +366,9 @@ One of the most impactful features is the **genetic quality** system:
 
 > 💡 **Pro Tip**: Find a village early and protect your Farmer Villagers! They are your key to agricultural success.
 
-[SCREENSHOT 10 - Side by side harvest comparison: Wild vs Select crop yields]
+#### Wild vs Select Seed Comparison
+
+![Screenshot10](assets/s10.png)
 
 ---
 
@@ -380,7 +376,8 @@ One of the most impactful features is the **genetic quality** system:
 
 A complete overhaul of the composting system that produces **Fertilizer**:
 
-[SCREENSHOT 11 - Better Composter in action with materials being added]
+![BetterComposterCrafting](assets/better_composter_crafting.png)
+![Screenshot11](assets/s11.png)
 
 #### How It Works
 
@@ -460,7 +457,8 @@ The Better Composter requires **balanced inputs** of two material types:
 
 The **Crop Inspector** is an essential tool for any serious farmer. Hold it in your main hand to see real-time information on the action bar.
 
-[SCREENSHOT 12 - Player holding Crop Inspector viewing different targets]
+![Screenshot6](assets/s6.png)
+![Screenshot7](assets/s7.png)
 
 #### Information Displayed
 
@@ -526,7 +524,7 @@ Biome: Desert   45°C
 
 #### Crafting Recipe
 
-[SCREENSHOT 13 - Crafting recipe for Crop Inspector]
+![CropInspectorCrafting](assets/crop_inspector_crafting.png)
 
 ---
 
@@ -720,7 +718,7 @@ Use this chart to plan your farms based on location:
 
 \*Requires irrigation system
 
-[SCREENSHOT 14 - World map showing optimal farming zones]
+![Screenshot1](assets/s1.png)
 
 ---
 
@@ -780,7 +778,9 @@ Use this chart to plan your farms based on location:
 ### Requirements
 
 - Minecraft Bedrock Edition **1.21.0** or higher
-- **Experimental Features**: Holiday Creator Features (enabled automatically)
+- **Experimental Features**: Upcoming Creator Features
+
+![ExperimentalFeatures](assets/experimental_features.png)
 
 ### Installation Steps
 
@@ -789,8 +789,6 @@ Use this chart to plan your farms based on location:
 3. Create a new world or add to existing world
 4. Enable the **Behavior Pack** and **Resource Pack**
 5. Ensure both packs show version `0.0.1` or higher
-
-[SCREENSHOT 15 - World settings showing addon enabled]
 
 ### ⚠️ Compatibility Notes
 
@@ -967,6 +965,6 @@ _Last Updated: February 2026 | Version 0.0.1 | Agriculture Update I_
 
 **Made with ❤️ by HormigaDev — Open Source under GPL-3.0**
 
-[SCREENSHOT 16 - Beautiful sunset over a thriving farm - closing image]
+![ScreenshotEnd](assets/end.png)
 
 </div>
