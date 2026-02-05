@@ -10,6 +10,13 @@ export class ScoreboardRepository {
     private static readonly BITS_LOW = 31n; // Aquí uso 31 bits para evitar problemas con signo
     private static readonly MASK_LOW = 0x7fffffffn; // Máscara para 31 bits
 
+    // Mapeo de dimensiones a números para optimizar memoria
+    private static readonly DIMENSION_MAP: Record<string, number> = {
+        'minecraft:overworld': 0,
+        'minecraft:nether': 1,
+        'minecraft:the_end': 2,
+    };
+
     private static tickLowObj: ScoreboardObjective | undefined;
     private static tickHighObj: ScoreboardObjective | undefined;
     private static dataObj: ScoreboardObjective | undefined;
@@ -38,7 +45,8 @@ export class ScoreboardRepository {
     }
 
     private static getKey(block: Block): string {
-        return `${Math.floor(block.x)}:${Math.floor(block.y)}:${Math.floor(block.z)}:${block.dimension.id}`;
+        const dim = this.DIMENSION_MAP[block.dimension.id] ?? 0;
+        return `${Math.floor(block.x)}:${Math.floor(block.y)}:${Math.floor(block.z)}:${dim}`;
     }
 
     static save(block: Block, lastTick: number, progress: number, hydrationCache: number): boolean {
