@@ -5,6 +5,7 @@
         "woc_fertilizer": { "textures": "textures/items/fertilizer" },
         "woc_creative_fertilizer": { "textures": "textures/items/creative_fertilizer" },
         "woc_crop_inspector": { "textures": "textures/items/crop_inspector" },
+        "woc_diet_book": { "textures": "textures/items/diet_book" },
         "woc_melon_seeds": { "textures": "textures/items/melon_seeds" },
         "woc_pumpkin_seeds": { "textures": "textures/items/pumpkin_seeds" },
         "woc_wheat_seeds": { "textures": "textures/items/wheat_seeds" },

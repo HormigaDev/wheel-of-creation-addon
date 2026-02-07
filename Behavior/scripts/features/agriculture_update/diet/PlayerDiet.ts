@@ -7,10 +7,8 @@ const MAX_SATURATION = 1.0;
 
 const I_FRUIT = 0;
 const I_PROTEIN = 1;
-const I_VEGGIE = 2;
 const I_GRAIN = 3;
 const I_SUGAR = 4;
-const I_DAIRY = 5;
 const I_FAT = 6;
 
 const BURN_RATES: number[] = [
@@ -117,7 +115,13 @@ export class PlayerDiet {
     }
 
     public getStats(): Nutrition {
-        return [...(this._cachedDiet ?? [0, 0, 0, 0, 0, 0, 0])];
+        const stats: Nutrition = [0, 0, 0, 0, 0, 0, 0];
+        if (this._cachedDiet) {
+            for (const i in this._cachedDiet) {
+                stats[i] = Math.floor(this._cachedDiet[i] * 100);
+            }
+        }
+        return stats;
     }
 
     public digest(baseAmount: number): void {

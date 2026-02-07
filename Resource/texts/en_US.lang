@@ -2,6 +2,7 @@ block.woc.farmland.name=Farmland Block
 item.woc.fertilizer.name=Fertilizer
 item.woc.creative_fertilizer.name=Creative Fertilizer
 item.woc.crop_inspector.name=§bCrop Inspector
+item.woc.diet_book.name=§bDiet Book
 
 woc.inspector.stats=H: %s  F: %s  T: %s °C
 woc.inspector.biome=Biome:

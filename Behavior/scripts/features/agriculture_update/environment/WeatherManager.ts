@@ -14,10 +14,11 @@ class WeatherManager {
                 world.setDynamicProperty(WEATHER_PROPERTY_ID, isWet);
             }
         });
-        world.afterEvents.worldLoad.subscribe(() => {
-            const savedState = world.getDynamicProperty(WEATHER_PROPERTY_ID) as boolean;
-            this._isRaining = savedState ?? false;
-        });
+    }
+
+    public init() {
+        const savedState = world.getDynamicProperty(WEATHER_PROPERTY_ID) as boolean;
+        this._isRaining = savedState ?? false;
     }
 
     public get isRaining(): boolean {
