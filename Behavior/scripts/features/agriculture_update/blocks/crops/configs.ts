@@ -1,4 +1,4 @@
-import { Times } from '../../../utils/Times';
+import { Times } from '../../../../utils/Times';
 
 export interface CropOptions {
     id: string;

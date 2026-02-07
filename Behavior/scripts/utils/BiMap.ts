@@ -10,7 +10,11 @@ export class BiMap {
         this.reverse = new Map<number, string>();
 
         if (opts) {
-            Object.entries(opts).forEach(([key, value]) => this.set(key, value));
+            for (const key in opts) {
+                if (Object.prototype.hasOwnProperty.call(opts, key)) {
+                    this.set(key, opts[key]);
+                }
+            }
         }
     }
 
@@ -39,6 +43,7 @@ export class BiMap {
     hasKey(key: string): boolean {
         return this.forward.has(key);
     }
+
     hasValue(value: number): boolean {
         return this.reverse.has(value);
     }

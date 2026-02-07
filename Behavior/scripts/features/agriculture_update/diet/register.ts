@@ -4,12 +4,19 @@ import { PlayerDiet } from './PlayerDiet';
 import { system, world } from '@minecraft/server';
 
 const PLAYERS_DIET = new Map<string, PlayerDiet>();
-const DIGGEST_INTERVAL = 400; // 20 segundos
+const DIGGEST_INTERVAL = 400;
+
+const initPlayer = (player: import('@minecraft/server').Player) => {
+    if (!PLAYERS_DIET.has(player.id)) {
+        PLAYERS_DIET.set(player.id, new PlayerDiet(player));
+    }
+};
 
 if (ADDON.enableDiet) {
+    world.getAllPlayers().forEach(initPlayer);
+
     world.afterEvents.playerSpawn.subscribe((e) => {
-        const playerDiet = new PlayerDiet(e.player);
-        PLAYERS_DIET.set(e.player.id, playerDiet);
+        initPlayer(e.player);
     });
 
     world.beforeEvents.playerLeave.subscribe((e) => {
@@ -18,29 +25,33 @@ if (ADDON.enableDiet) {
 
     world.afterEvents.itemCompleteUse.subscribe((e) => {
         const { itemStack, source: player } = e;
+        if (!player) return;
+
         const playerDiet = PLAYERS_DIET.get(player.id);
-        playerDiet?.addFood(itemStack.typeId);
+        if (playerDiet) {
+            playerDiet.addFood(itemStack.typeId);
+        }
     });
 
     system.runInterval(() => {
-        let intervalBurn = METABOLISM.BASE_BURN_PER_TICK * DIGGEST_INTERVAL;
+        const baseBurn = METABOLISM.BASE_BURN_PER_TICK * DIGGEST_INTERVAL;
 
         PLAYERS_DIET.forEach((pd) => {
             const player = pd.player;
 
             if (!player || !player.isValid) return;
 
-            const location = player.location;
-            let currentTemp = 20; // Valor default por seguridad
+            let playerBurn = baseBurn;
 
-            try {
+            if (ADDON.enableBiomeDietImpact) {
+                const location = player.location;
+                let currentTemp = 20;
+
                 const biome = player.dimension.getBiome(location);
                 if (biome) {
                     currentTemp = getBiomeTemperature(biome.id, location);
                 }
-            } catch (e) {}
 
-            if (ADDON.enableBiomeDietImpact) {
                 let thermalMultiplier = 1.0;
 
                 if (currentTemp < METABOLISM.IDEAL_TEMP_MIN) {
@@ -48,7 +59,8 @@ if (ADDON.enableDiet) {
                     let penalty = diff * METABOLISM.COLD_PENALTY_FACTOR;
 
                     if (ADDON.enableArmorDietImpact) {
-                        const protection = Math.min(0.9, getPlayerThermalStats(player).insulation);
+                        const insulation = getPlayerThermalStats(player).insulation;
+                        const protection = insulation > 0.9 ? 0.9 : insulation;
                         penalty *= 1.0 - protection;
                     }
 
@@ -58,16 +70,17 @@ if (ADDON.enableDiet) {
                     let penalty = diff * METABOLISM.HEAT_PENALTY_FACTOR;
 
                     if (ADDON.enableArmorDietImpact) {
-                        penalty *= 1.0 + getPlayerThermalStats(player).conductivity;
+                        const conductivity = getPlayerThermalStats(player).conductivity;
+                        penalty *= 1.0 + conductivity;
                     }
 
                     thermalMultiplier += penalty;
                 }
 
-                intervalBurn *= thermalMultiplier;
+                playerBurn *= thermalMultiplier;
             }
 
-            pd.digest(intervalBurn);
+            pd.digest(playerBurn);
             pd.save();
         });
     }, DIGGEST_INTERVAL);

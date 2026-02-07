@@ -1,5 +1,5 @@
 import { Block, Dimension, BlockPermutation } from '@minecraft/server';
-import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
+import { ScoreboardRepository } from '../../../../data/ScoreboardRepository';
 import { WOC_FARMLAND_ID, WEED_BLOCK_ID, DEAD_CROP_BLOCKS } from './constants';
 
 /**

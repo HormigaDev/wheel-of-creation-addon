@@ -1,5 +1,5 @@
 import { Block } from '@minecraft/server';
-import { getBiomeRisks, getBiomeTemperature } from '../../../config';
+import { getBiomeRisks, getBiomeTemperature } from '../../../../config';
 import { HIGH_WATER_THRESHOLD } from './constants';
 import { getHydration, getFertilizerLevel, isPreferredBiome, isWildCrop } from './utils';
 
