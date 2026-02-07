@@ -1,5 +1,5 @@
 import { Block, RawMessage } from '@minecraft/server';
-import { getBiomeTemperature } from '../../../../config';
+import { getBiomeTemperature } from '../../../../../config';
 import { COLUMN_CROP_REGISTRY } from '../../../blocks/crops/configs';
 import { BlockInspectorHandler, InspectorContext } from '../types';
 import { getSoilData, checkWaterSource, isPreferredBiome, getBlockState } from '../utils';

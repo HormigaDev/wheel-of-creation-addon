@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue?style=for-the-badge)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Script%20API-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
-🌐 **[🇪🇸 Leer en Español](docs/agriculture_update/AGRICULTURE_UPDATE_I_SPANISH.md)** | **[🇧🇷 Ler em Português](docs/agriculture_update/AGRICULTURE_UPDATE_I_PORTUGUESE.md)**
+🌐 **[🇪🇸 Leer en Español](./AGRICULTURE_UPDATE_I_SPANISH.md)** | **[🇧🇷 Ler em Português](./AGRICULTURE_UPDATE_I_PORTUGUESE.md)**
 
 ---
 
@@ -16,7 +16,7 @@
 
 > 🎮 **Inspired by [TerraFirmaCraft](https://terrafirmacraft.com/)** — This addon takes inspiration from some mechanics of the popular Java mod TerraFirmaCraft. However, this is **NOT** an official port. All systems have been completely reimagined and reinterpreted for Minecraft Bedrock Edition by **HormigaDev**.
 
-![Screenshot1](assets/portada.png)
+![Screenshot1](../../assets/portada.png)
 
 </div>
 
@@ -173,7 +173,7 @@ Two quality tiers for seeds:
 </tr>
 </table>
 
-![Screenshot2](assets/s2.png)
+![Screenshot2](../../assets/s2.png)
 
 ---
 
@@ -223,8 +223,8 @@ Each biome in Minecraft now has a complete climate profile that affects farming:
 | ❄️ Frozen Peaks    |    0     |    -25    |  25%  | 0%  |  0%   |     0%     |
 | 🍄 Mushroom Island |    10    |    20     |  0%   | 5%  |  8%   |    90%     |
 
-![Screenshot3](assets/s3.png)
-![Screenshot4](assets/s4.png)
+![Screenshot3](../../assets/s3.png)
+![Screenshot4](../../assets/s4.png)
 
 ---
 
@@ -292,8 +292,8 @@ _Produce multiple fruits over their lifetime_
 3. Stem continues producing until it reaches max lifetime
 4. Quality seeds produce more fruits over a longer period
 
-![Screenshot8](assets/s8.png)
-![Screenshot9](assets/s9.png)
+![Screenshot8](../../assets/s8.png)
+![Screenshot9](../../assets/s9.png)
 
 #### 3️⃣ Column Crops
 
@@ -310,7 +310,7 @@ _Vertical growing plants with unique requirements_
 - Requires adjacent water source (or high hydration farmland)
 - Each root can produce limited segments before dying
 
-![Screenshot5](assets/s5.png)
+![Screenshot5](../../assets/s5.png)
 
 ---
 
@@ -368,7 +368,7 @@ One of the most impactful features is the **genetic quality** system:
 
 #### Wild vs Select Seed Comparison
 
-![Screenshot10](assets/s10.png)
+![Screenshot10](../../assets/s10.png)
 
 ---
 
@@ -376,8 +376,8 @@ One of the most impactful features is the **genetic quality** system:
 
 A complete overhaul of the composting system that produces **Fertilizer**:
 
-![BetterComposterCrafting](assets/better_composter_crafting.png)
-![Screenshot11](assets/s11.png)
+![BetterComposterCrafting](../../assets/better_composter_crafting.png)
+![Screenshot11](../../assets/s11.png)
 
 #### How It Works
 
@@ -457,8 +457,8 @@ The Better Composter requires **balanced inputs** of two material types:
 
 The **Crop Inspector** is an essential tool for any serious farmer. Hold it in your main hand to see real-time information on the action bar.
 
-![Screenshot6](assets/s6.png)
-![Screenshot7](assets/s7.png)
+![Screenshot6](../../assets/s6.png)
+![Screenshot7](../../assets/s7.png)
 
 #### Information Displayed
 
@@ -524,7 +524,7 @@ Biome: Desert   45°C
 
 #### Crafting Recipe
 
-![CropInspectorCrafting](assets/crop_inspector_crafting.png)
+![CropInspectorCrafting](../../assets/crop_inspector_crafting.png)
 
 ---
 
@@ -718,7 +718,7 @@ Use this chart to plan your farms based on location:
 
 \*Requires irrigation system
 
-![Screenshot1](assets/s1.png)
+![Screenshot1](../../assets/s1.png)
 
 ---
 
@@ -780,7 +780,7 @@ Use this chart to plan your farms based on location:
 - Minecraft Bedrock Edition **1.21.0** or higher
 - **Experimental Features**: Upcoming Creator Features
 
-![ExperimentalFeatures](assets/experimental_features.png)
+![ExperimentalFeatures](../../assets/experimental_features.png)
 
 ### Installation Steps
 
@@ -965,6 +965,6 @@ _Last Updated: February 2026 | Version 0.0.1 | Agriculture Update I_
 
 **Made with ❤️ by HormigaDev — Open Source under GPL-3.0**
 
-![ScreenshotEnd](assets/end.png)
+![ScreenshotEnd](../../assets/end.png)
 
 </div>

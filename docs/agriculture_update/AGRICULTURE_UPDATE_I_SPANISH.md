@@ -14,7 +14,7 @@
 
 > 🎮 **Inspirado en [TerraFirmaCraft](https://terrafirmacraft.com/)** — Este addon se inspira en algunas mecánicas del popular mod de Java TerraFirmaCraft. Sin embargo, **NO** es un port oficial. Todos los sistemas han sido completamente reimaginados y reinterpretados para Minecraft Bedrock Edition por **HormigaDev**.
 
-![Screenshot1](../assets/portada.png)
+![Screenshot1](../../assets/portada.png)
 
 </div>
 
@@ -171,7 +171,7 @@ Dos niveles de calidad para las semillas:
 </tr>
 </table>
 
-![Screenshot2](../assets/s2.png)
+![Screenshot2](../../assets/s2.png)
 
 ---
 
@@ -221,8 +221,8 @@ Cada bioma en Minecraft tiene ahora un perfil climático completo que afecta al 
 | ❄️ Picos Helados  |    0    |    -25    |  25%  |  0%   |   0%   |      0%      |
 | 🍄 Isla Champiñón |   10    |    20     |  0%   |  5%   |   8%   |     90%      |
 
-![Screenshot3](../assets/s3.png)
-![Screenshot3](../assets/s4.png)
+![Screenshot3](../../assets/s3.png)
+![Screenshot3](../../assets/s4.png)
 
 ---
 
@@ -290,8 +290,8 @@ _Producen múltiples frutos a lo largo de su vida_
 3. El tallo sigue produciendo hasta alcanzar su vida útil máxima.
 4. Las semillas de calidad producen más frutos durante un período más largo.
 
-![Screenshot8](../assets/s8.png)
-![Screenshot8](../assets/s9.png)
+![Screenshot8](../../assets/s8.png)
+![Screenshot8](../../assets/s9.png)
 
 #### 3️⃣ Cultivos de Columna
 
@@ -308,7 +308,7 @@ _Plantas de crecimiento vertical con requisitos únicos_
 - Requiere fuente de agua adyacente (o tierra de cultivo con alta hidratación).
 - Cada raíz puede producir segmentos limitados antes de morir.
 
-![Screenshot5](../assets/s5.png)
+![Screenshot5](../../assets/s5.png)
 
 ---
 
@@ -366,7 +366,7 @@ Una de las características más importantes es el sistema de **calidad genétic
 
 #### Comparación entre semillas silvestre y semillas selectas
 
-![Screenshot10](../assets/s10.png)
+![Screenshot10](../../assets/s10.png)
 
 ---
 
@@ -374,8 +374,8 @@ Una de las características más importantes es el sistema de **calidad genétic
 
 Un rediseño completo del sistema de compostaje que produce **Fertilizante**:
 
-![BetterComposterCrafting](../assets/better_composter_crafting.png)
-![Screenshot11](../assets/s11.png)
+![BetterComposterCrafting](../../assets/better_composter_crafting.png)
+![Screenshot11](../../assets/s11.png)
 
 #### Cómo Funciona
 
@@ -455,8 +455,8 @@ Llenar Ambos Lados Usar Polvo de Hueso Recoger Fertilizante
 
 El **Inspector de Cultivos** es una herramienta esencial para cualquier granjero serio. Sostenlo en tu mano principal para ver información en tiempo real en la barra de acción.
 
-![Screenshot6](../assets/s6.png)
-![Screenshot6](../assets/s7.png)
+![Screenshot6](../../assets/s6.png)
+![Screenshot6](../../assets/s7.png)
 
 #### Información Mostrada
 
@@ -522,7 +522,7 @@ Trigo Muerto
 
 #### Receta de Fabricación
 
-![CropInspectorCrafting](../assets/crop_inspector_crafting.png)
+![CropInspectorCrafting](../../assets/crop_inspector_crafting.png)
 
 ---
 
@@ -716,7 +716,7 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 
 \*Requiere sistema de irrigación
 
-![Screenshot1](../assets/s1.png)
+![Screenshot1](../../assets/s1.png)
 
 ---
 
@@ -777,7 +777,7 @@ Usa esta tabla para planificar tus granjas según la ubicación:
 
 - Minecraft Bedrock Edition **1.21.0** o superior.
 - **Funciones Experimentales**: Próximas funciones de creador.
-  ![ExperimentalFeatures](../assets/experimental_features.png)
+  ![ExperimentalFeatures](../../assets/experimental_features.png)
 
 ### Pasos de Instalación
 
@@ -967,6 +967,6 @@ _Última actualización: Febrero 2026 | Versión 0.0.1 | Agriculture Update I_
 
 **Hecho con ❤️ por HormigaDev — Código abierto bajo GPL-3.0**
 
-![ScreenshotEnd](../assets/end.png)
+![ScreenshotEnd](../../assets/end.png)
 
 </div>

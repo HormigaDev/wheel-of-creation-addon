@@ -8,7 +8,7 @@ import {
     Player,
     EntityEquippableComponent,
 } from '@minecraft/server';
-import { safeExecute } from '../../utils/ErrorHandler';
+import { safeExecute } from '../../../utils/ErrorHandler';
 
 type CompostType = 'green' | 'brown';
 

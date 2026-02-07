@@ -11,9 +11,9 @@ import {
     ItemStack,
     world,
 } from '@minecraft/server';
-import { getBiomeRisks, getBiomeTemperature } from '../../config';
-import { ScoreboardRepository } from '../../data/ScoreboardRepository';
-import { logger, safeExecute } from '../../utils/ErrorHandler';
+import { getBiomeRisks, getBiomeTemperature } from '../../../config';
+import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
+import { logger, safeExecute } from '../../../utils/ErrorHandler';
 import {
     ColumnCropOptions,
     WOC_FARMLAND_ID,

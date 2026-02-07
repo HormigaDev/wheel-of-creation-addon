@@ -1,4 +1,5 @@
 import { Vector3 } from '@minecraft/server';
+import { BiMap } from './utils/BiMap';
 
 // ============================================================================
 // CONFIGURACIÓN CENTRALIZADA DE BIOMAS
@@ -118,6 +119,170 @@ const BIOME_REGISTRY: Record<string, BiomeData> = {
     the_end: [0, -80, 0.5, 0.0, 0.0, 0.0],
 };
 
+export const FOOD_MAP = new BiMap({
+    // Cultivos básicos
+    'minecraft:apple': 0,
+    'minecraft:golden_apple': 1,
+    'minecraft:enchanted_golden_apple': 2,
+    'minecraft:potato': 3,
+    'minecraft:baked_potato': 4,
+    'minecraft:poisonous_potato': 5,
+    'minecraft:carrot': 6,
+    'minecraft:golden_carrot': 7,
+    'minecraft:beetroot': 8,
+    'minecraft:bread': 9,
+
+    // Carnes crudas
+    'minecraft:beef': 10,
+    'minecraft:porkchop': 11,
+    'minecraft:chicken': 12,
+    'minecraft:mutton': 13,
+    'minecraft:rabbit': 14,
+    'minecraft:cod': 15,
+    'minecraft:salmon': 16,
+    'minecraft:tropical_fish': 17,
+    'minecraft:pufferfish': 18,
+    'minecraft:rotten_flesh': 19,
+
+    // Carnes cocinadas
+    'minecraft:cooked_beef': 20,
+    'minecraft:cooked_porkchop': 21,
+    'minecraft:cooked_chicken': 22,
+    'minecraft:cooked_mutton': 23,
+    'minecraft:cooked_rabbit': 24,
+    'minecraft:cooked_cod': 25,
+    'minecraft:cooked_salmon': 26,
+
+    // Preparados / varios
+    'minecraft:cookie': 27,
+    'minecraft:cake': 28,
+    'minecraft:pumpkin_pie': 29,
+    'minecraft:rabbit_stew': 30,
+    'minecraft:beetroot_soup': 31,
+    'minecraft:mushroom_stew': 32,
+    'minecraft:suspicious_stew': 33,
+
+    // Otros comestibles
+    'minecraft:chorus_fruit': 34,
+    'minecraft:dried_kelp': 35,
+    'minecraft:honey_bottle': 36,
+    'minecraft:melon_slice': 37,
+    'minecraft:sweet_berries': 38,
+    'minecraft:glow_berries': 39,
+
+    // Otros cultivos
+    'woc:carrot': 40,
+    'woc:potato': 41,
+    'woc:onion': 42,
+    'woc:tomato': 43,
+    'woc:cabbage': 44,
+    'woc:rice': 45,
+});
+
+// [frutas, proteinas, vegetales, granos, azúcares, lácteos, grasas]
+export type Nutrition = [number, number, number, number, number, number, number];
+
+const foodPropertiesData: Record<number, Nutrition> = {
+    // ===== FRUTAS (50g = Media Manzana / Puñado de bayas) =====
+    // Aporte rápido de azúcar y vitaminas.
+    0: [0.2, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0], // apple (20% fruta + azúcar)
+    34: [0.15, 0.0, 0.0, 0.0, 0.05, 0.0, 0.0], // chorus_fruit
+    37: [0.15, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0], // melon_slice (Mucha agua)
+    38: [0.1, 0.0, 0.0, 0.0, 0.05, 0.0, 0.0], // sweet_berries
+    39: [0.15, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0], // glow_berries
+
+    // Golden (INERTE) / Enchanted (SAGRADO)
+    // Regla Oro Inerte: Golden Apple = Apple (50g)
+    1: [0.2, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0], // golden_apple
+    2: [1.0, 0.5, 0.5, 0.5, 1.0, 0.5, 0.5], // enchanted_golden_apple (Sigue siendo divina)
+
+    // ===== VEGETALES (50g = Una Papa/Zanahoria mediana) =====
+    // Nutrición sólida. La base de la supervivencia.
+    3: [0.0, 0.0, 0.15, 0.05, 0.0, 0.0, 0.0], // potato (Cruda)
+    4: [0.0, 0.0, 0.25, 0.15, 0.0, 0.0, 0.0], // baked_potato (25% Veg + Energía - Muy buena)
+    5: [0.0, 0.0, 0.05, 0.0, 0.0, 0.0, 0.0], // poisonous_potato
+    6: [0.0, 0.0, 0.2, 0.0, 0.05, 0.0, 0.0], // carrot (20% Veg + Azúcar)
+    7: [0.0, 0.0, 0.2, 0.0, 0.05, 0.0, 0.0], // golden_carrot (Igual a carrot #6 - ORO INERTE)
+    8: [0.0, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0], // beetroot
+    35: [0.0, 0.05, 0.1, 0.0, 0.0, 0.0, 0.0], // dried_kelp
+
+    // WoC vegetales
+    40: [0.0, 0.0, 0.2, 0.0, 0.05, 0.0, 0.0], // woc:carrot
+    41: [0.0, 0.0, 0.15, 0.05, 0.0, 0.0, 0.0], // woc:potato
+    42: [0.0, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0], // woc:onion
+    43: [0.15, 0.0, 0.1, 0.0, 0.05, 0.0, 0.0], // woc:tomato
+    44: [0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0], // woc:cabbage (Nutritiva)
+
+    // ===== GRANOS (50g = Un bolillo/panecillo) =====
+    // El pan es denso. 50g de pan llenan bastante.
+    9: [0.0, 0.05, 0.0, 0.25, 0.05, 0.0, 0.05], // bread (25% Grano - Comes 4 y estás lleno)
+    45: [0.0, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0], // woc:rice
+
+    // ===== PROTEÍNAS (50g = Un filete pequeño / Una chuleta) =====
+    // La carne es densa. Aporta mucha saciedad.
+    10: [0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.05], // beef (Crudo - Riesgo)
+    11: [0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.1], // porkchop (Crudo)
+    12: [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.05], // chicken (Crudo)
+    13: [0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.05], // mutton
+    14: [0.0, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0], // rabbit
+    15: [0.0, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0], // cod
+    16: [0.0, 0.12, 0.0, 0.0, 0.0, 0.0, 0.05], // salmon
+    17: [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0], // tropical_fish
+    19: [0.0, 0.05, 0.0, 0.0, 0.0, 0.0, 0.02], // rotten_flesh
+
+    // Cocinadas (Nutrición óptima)
+    // Subimos al 30% aprox. 3-4 carnes llenan la barra.
+    20: [0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.15], // cooked_beef (30% Prot + Grasa)
+    21: [0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.2], // cooked_porkchop (Menos prot, mucha grasa)
+    22: [0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.1], // cooked_chicken
+    23: [0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.15], // cooked_mutton
+    24: [0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.05], // cooked_rabbit (Magra)
+    25: [0.0, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0], // cooked_cod (Ligero)
+    26: [0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.15], // cooked_salmon (Excelente)
+
+    // ===== PREPARADAS / MEZCLAS =====
+    // Aquí es donde la regla 50g brilla. Un pastel o estofado pesa MÁS de 50g.
+    // Asumimos que el estofado es la suma de sus partes (~200g).
+    27: [0.0, 0.0, 0.0, 0.15, 0.2, 0.0, 0.1], // cookie (Pequeña pero densa)
+    28: [0.1, 0.1, 0.0, 0.4, 0.6, 0.3, 0.3], // cake (Slice grande: Muy potente)
+    29: [0.1, 0.0, 0.3, 0.3, 0.4, 0.1, 0.2], // pumpkin_pie
+
+    // ESTOFADOS (La Meta del Juego)
+    // Rabbit Stew = Rabbit(25%) + Potato(25%) + Carrot(20%) + Mushroom.
+    // Suma lógica = ~70-80%. Un solo estofado es casi una comida completa.
+    30: [0.0, 0.4, 0.4, 0.1, 0.0, 0.0, 0.2], // rabbit_stew (Plato Completo)
+    31: [0.0, 0.0, 0.6, 0.0, 0.0, 0.0, 0.0], // beetroot_soup (60% Veg - Muy saludable)
+    32: [0.0, 0.1, 0.5, 0.0, 0.0, 0.0, 0.0], // mushroom_stew
+    33: [0.0, 0.1, 0.4, 0.0, 0.0, 0.0, 0.0], // suspicious_stew
+};
+export const FOOD_PROPERTIES: Map<number, Nutrition> = new Map(
+    Object.entries(foodPropertiesData).map(([k, v]) => [+k, v]),
+);
+
+// ============================================================================
+// CONFIGURACIÓN METABÓLICA
+// ============================================================================
+
+// Ticks totales en un día de Minecraft = 24000 (20 minutos)
+// Si queremos que la barra baje del 100% al 0% en 3 días de juego (Survival Hardcore):
+// 24000 * 3 = 72000 ticks.
+// 1.0 / 72000 = ~0.0000138 por tick.
+
+export const METABOLISM = {
+    // Cuánto baja la nutrición por tick en condiciones perfectas (20°C, quieto)
+    BASE_BURN_PER_TICK: 0.000015,
+
+    // Temperatura ideal del cuerpo (Zona de confort)
+    IDEAL_TEMP_MIN: 15,
+    IDEAL_TEMP_MAX: 25,
+
+    // Penalización por frío (Tiritar gasta MUCHA energía)
+    COLD_PENALTY_FACTOR: 0.02, // +2% de consumo por cada grado bajo el mínimo
+
+    // Penalización por calor (Sudar gasta energía, pero menos que el frío)
+    HEAT_PENALTY_FACTOR: 0.01, // +1% de consumo por cada grado sobre el máximo
+};
+
 function normalizeBiomeId(fullId: string): string {
     return fullId.startsWith('minecraft:') ? fullId.substring(10) : fullId;
 }
@@ -161,3 +326,14 @@ export function getBiomeRisks(biomeId: string) {
         rainSensitivity: data[5], // NUEVO DATO
     };
 }
+
+export const ADDON = {
+    // Agriculture Update I
+    enableBetterFarming: true,
+
+    // Agriculture Update II
+    enableDiet: true,
+    enableBiomeDietImpact: true,
+    enableArmorDietImpact: true,
+    enablePhysicalActivityDietImpact: true,
+};

@@ -1,5 +1,5 @@
 import { Block, RawMessage } from '@minecraft/server';
-import { getBiomeTemperature } from '../../../../config';
+import { getBiomeTemperature } from '../../../../../config';
 import { STEM_CROP_REGISTRY } from '../../../blocks/crops/configs';
 import { BlockInspectorHandler, InspectorContext } from '../types';
 import {

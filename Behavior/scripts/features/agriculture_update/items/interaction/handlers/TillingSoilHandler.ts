@@ -1,7 +1,7 @@
 import { InteractionHandler, InteractionContext } from '../types';
 import { ARABLE_BLOCKS } from '../config';
 import { damageHeldTool } from '../utils';
-import { getAtmosphericHumidity } from '../../../../config';
+import { getAtmosphericHumidity } from '../../../../../config';
 
 /**
  * Handler para convertir bloques arables en tierra de cultivo usando una azada

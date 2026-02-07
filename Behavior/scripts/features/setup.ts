@@ -1,9 +1,11 @@
 import { system } from '@minecraft/server';
-import farmland from './blocks/Farmland';
-import betterComposter from './blocks/BetterComposter';
-import baseCrops from './blocks/crops/baseCrops';
+import farmland from './agriculture_update/blocks/Farmland';
+import betterComposter from './agriculture_update/blocks/BetterComposter';
+import baseCrops from './agriculture_update/blocks/crops/baseCrops';
 import { logger, safeExecute } from '../utils/ErrorHandler';
 import './items/CropInspector';
+import './items/InteractionControl';
+import './agriculture_update/diet/register';
 
 system.beforeEvents.startup.subscribe((event) => {
     const result = safeExecute(() => {

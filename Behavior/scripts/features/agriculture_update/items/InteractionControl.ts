@@ -1,5 +1,5 @@
 import { world, system } from '@minecraft/server';
-import { safeExecute } from '../../utils/ErrorHandler';
+import { safeExecute } from '../../../utils/ErrorHandler';
 import { findInteractionHandler } from './interaction/handlers/index';
 import { InteractionContext } from './interaction/types';
 

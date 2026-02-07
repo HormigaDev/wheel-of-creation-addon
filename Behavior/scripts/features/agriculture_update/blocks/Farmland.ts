@@ -5,8 +5,8 @@ import {
     BlockComponentOnPlaceEvent,
     Vector3,
 } from '@minecraft/server';
-import { getAtmosphericHumidity, getBiomeRisks, getBiomeTemperature } from '../../config';
-import { safeExecute } from '../../utils/ErrorHandler';
+import { getAtmosphericHumidity, getBiomeRisks, getBiomeTemperature } from '../../../config';
+import { safeExecute } from '../../../utils/ErrorHandler';
 import { weatherManager } from '../environment/WeatherManager';
 
 const MAX_HYDRATION = 10;

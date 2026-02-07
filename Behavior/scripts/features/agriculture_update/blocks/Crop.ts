@@ -12,8 +12,8 @@ import {
     ItemStack,
     world,
 } from '@minecraft/server';
-import { ScoreboardRepository } from '../../data/ScoreboardRepository';
-import { safeExecute } from '../../utils/ErrorHandler';
+import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
+import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     CropOptions,
     getBaseCropVariant,

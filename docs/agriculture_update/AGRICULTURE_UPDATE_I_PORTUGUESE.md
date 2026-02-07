@@ -14,7 +14,7 @@
 
 > 🎮 **Inspirado no [TerraFirmaCraft](https://terrafirmacraft.com/)** — Este addon se inspira em algumas mecânicas do popular mod de Java TerraFirmaCraft. No entanto, **NÃO** é um port oficial. Todos os sistemas foram completamente reimaginados e reinterpretados para o Minecraft Bedrock Edition por **HormigaDev**.
 
-![Screenshot1](../assets/portada.png)
+![Screenshot1](../../assets/portada.png)
 
 </div>
 
@@ -171,7 +171,7 @@ Dois níveis de qualidade para sementes:
 </tr>
 </table>
 
-![Screenshot2](../assets/s2.png)
+![Screenshot2](../../assets/s2.png)
 
 ---
 
@@ -221,8 +221,8 @@ Cada bioma no Minecraft agora tem um perfil climático completo que afeta a agri
 | ❄️ Picos Gelados |    0    |    -25    |  25%  |  0%   |  0%   |     0%      |
 | 🍄 Ilha Cogumelo |   10    |    20     |  0%   |  5%   |  8%   |     90%     |
 
-![Screenshot3](../assets/s3.png)
-![Screenshot4](../assets/s4.png)
+![Screenshot3](../../assets/s3.png)
+![Screenshot4](../../assets/s4.png)
 
 ---
 
@@ -290,8 +290,8 @@ _Produzem múltiplos frutos ao longo de sua vida_
 3. O caule continua produzindo até atingir sua vida útil máxima.
 4. Sementes de qualidade produzem mais frutos por um período maior.
 
-![Screenshot8](../assets/s8.png)
-![Screenshot9](../assets/s9.png)
+![Screenshot8](../../assets/s8.png)
+![Screenshot9](../../assets/s9.png)
 
 #### 3️⃣ Culturas de Coluna
 
@@ -308,7 +308,7 @@ _Plantas de crescimento vertical com requisitos únicos_
 - Requer fonte de água adjacente (ou terra arada com alta hidratação).
 - Cada raiz pode produzir segmentos limitados antes de morrer.
 
-![Screenshot5](../assets/s5.png)
+![Screenshot5](../../assets/s5.png)
 
 ---
 
@@ -366,7 +366,7 @@ Uma das funcionalidades mais impactantes é o sistema de **qualidade genética**
 
 #### Comparação entre sementes selvagens e sementes selecionadas
 
-![Screenshot10](../assets/s10.png)
+![Screenshot10](../../assets/s10.png)
 
 ---
 
@@ -374,8 +374,8 @@ Uma das funcionalidades mais impactantes é o sistema de **qualidade genética**
 
 Uma revisão completa do sistema de compostagem que produz **Fertilizante**:
 
-![BetterComposterCrafting](../assets/better_composter_crafting.png)
-![Screenshot11](../assets/s11.png)
+![BetterComposterCrafting](../../assets/better_composter_crafting.png)
+![Screenshot11](../../assets/s11.png)
 
 #### Como Funciona
 
@@ -455,8 +455,8 @@ A Composteira Melhorada requer **insumos equilibrados** de dois tipos de materia
 
 O **Inspetor de Culturas** é uma ferramenta essencial. Segure-o na mão principal para ver informações em tempo real na barra de ação.
 
-![Screenshot6](../assets/s6.png)
-![Screenshot7](../assets/s7.png)
+![Screenshot6](../../assets/s6.png)
+![Screenshot7](../../assets/s7.png)
 
 #### Informações Exibidas
 
@@ -522,7 +522,7 @@ Bioma: Deserto   45°C
 
 #### Receita de Fabricação
 
-![CropInspectorCrafting](../assets/crop_inspector_crafting.png)
+![CropInspectorCrafting](../../assets/crop_inspector_crafting.png)
 
 ---
 
@@ -716,7 +716,7 @@ Use esta tabela para planejar suas fazendas com base na localização:
 
 \*Requer sistema de irrigação
 
-![Screenshot1](../assets/s1.png)
+![Screenshot1](../../assets/s1.png)
 
 ---
 
@@ -778,7 +778,7 @@ Use esta tabela para planejar suas fazendas com base na localização:
 - Minecraft Bedrock Edition **1.21.0** ou superior.
 - **Recursos Experimentais**: Próximas Funcionalidades de Criador.
 
-![ExperimentalFeatures](../assets/experimental_features.png)
+![ExperimentalFeatures](../../assets/experimental_features.png)
 
 ### Passos para Instalação
 
@@ -963,6 +963,6 @@ _Última Atualização: Fevereiro 2026 | Versão 0.0.1 | Agriculture Update I_
 
 **Feito com ❤️ por HormigaDev — Open Source sob GPL-3.0**
 
-![ScreenshotEnd](../assets/end.png)
+![ScreenshotEnd](../../assets/end.png)
 
 </div>

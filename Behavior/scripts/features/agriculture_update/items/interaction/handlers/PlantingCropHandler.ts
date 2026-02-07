@@ -7,7 +7,7 @@ import {
     MIN_HYDRATION_FOR_SUGARCANE,
 } from '../config';
 import { consumeItemInHand, hasAdjacentWater, getFarmlandHydration } from '../utils';
-import { getAtmosphericHumidity } from '../../../../config';
+import { getAtmosphericHumidity } from '../../../../../config';
 
 /**
  * Handler para plantar cultivos desde semillas

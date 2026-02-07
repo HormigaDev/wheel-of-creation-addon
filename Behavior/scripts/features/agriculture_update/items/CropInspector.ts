@@ -1,8 +1,8 @@
 import { system, world, EquipmentSlot, RawMessage } from '@minecraft/server';
-import { getBiomeTemperature } from '../../config';
+import { getBiomeTemperature } from '../../../config';
 import { findHandler } from './inspector/index';
 import { InspectorContext } from './inspector/types';
-import { logger } from '../../utils/ErrorHandler';
+import { logger } from '../../../utils/ErrorHandler';
 
 const INSPECTOR_ITEM_ID = 'woc:crop_inspector';
 
