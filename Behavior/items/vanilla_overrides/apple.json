@@ -14,12 +14,12 @@
                 "value": "item.apple.name"
             },
             "minecraft:tags": {
-                "tags": ["minecraft:is_food", "wocd:fruit"]
+                "tags": ["minecraft:is_food"]
             },
             "minecraft:use_animation": "eat",
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
-                "movement_modifier": 0.35
+                "movement_modifier": 1.0
             },
             "minecraft:food": {
                 "nutrition": 2,

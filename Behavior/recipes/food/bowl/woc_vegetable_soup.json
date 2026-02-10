@@ -1,0 +1,16 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:vegetable_soup_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "woc:cabbage_leaf" },
+            { "item": "minecraft:carrot" },
+            { "item": "woc:onion" }
+        ],
+        "result": { "item": "woc:vegetable_soup", "count": 1 }
+    }
+}

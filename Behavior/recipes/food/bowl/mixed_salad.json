@@ -1,0 +1,16 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:mixed_salad_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "woc:cabbage_leaf" },
+            { "item": "minecraft:carrot" },
+            { "item": "woc:tomato" }
+        ],
+        "result": { "item": "woc:mixed_salad", "count": 1 }
+    }
+}

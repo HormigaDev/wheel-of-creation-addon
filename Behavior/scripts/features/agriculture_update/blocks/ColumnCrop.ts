@@ -13,17 +13,12 @@ import {
 } from '@minecraft/server';
 import { getBiomeRisks, getBiomeTemperature } from '../../../config';
 import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
-import { logger, safeExecute } from '../../../utils/ErrorHandler';
+import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     ColumnCropOptions,
-    WOC_FARMLAND_ID,
-    getHydration,
-    getFertilizerLevel,
-    tryConsumeFertilizer,
     getCropQuality,
     getProducedCount,
     setProducedCount,
-    turnToWeed,
     killCrop,
     hasAdjacentWater,
     isPreferredBiome,
@@ -66,13 +61,12 @@ export class ColumnCrop implements BlockCustomComponent {
 
     private handlePlace(e: BlockComponentOnPlaceEvent) {
         const { block } = e;
-        const currentTick = Math.floor(world.getAbsoluteTime());
-
         const below = block.below(1);
+        // Si el bloque de abajo es del mismo tipo, es un segmento superior
         if (below && below.typeId === this.opts.id) return;
 
-        const hydration = below?.typeId === WOC_FARMLAND_ID ? getHydration(below) : 0;
-        ScoreboardRepository.save(block, currentTick, 0, hydration);
+        const currentTick = Math.floor(world.getAbsoluteTime());
+        ScoreboardRepository.save(block, currentTick, 0, 0);
         setProducedCount(block, 0);
     }
 
@@ -81,6 +75,7 @@ export class ColumnCrop implements BlockCustomComponent {
 
         const blockBelow = block.below(1);
         if (!blockBelow) return;
+        // Si el bloque de abajo es del mismo tipo, es un segmento superior (no procesar)
         if (blockBelow.typeId === this.opts.id) return;
 
         // Verificar suelo válido
@@ -89,8 +84,8 @@ export class ColumnCrop implements BlockCustomComponent {
             return;
         }
 
-        // Verificar requerimiento de agua
-        if (this.opts.requiredWaterSource && !this.checkWaterRequirement(blockBelow)) {
+        // Verificar agua adyacente (requerido para cultivos de columna)
+        if (!hasAdjacentWater(blockBelow)) {
             this.breakColumn(block);
             return;
         }
@@ -103,9 +98,6 @@ export class ColumnCrop implements BlockCustomComponent {
             return;
         }
 
-        const currentSoilHydro =
-            blockBelow.typeId === WOC_FARMLAND_ID ? getHydration(blockBelow) : stored.hydration;
-
         const biome = dimension.getBiome(block.location);
         const risks = getBiomeRisks(biome.id);
         const temp = getBiomeTemperature(biome.id, block.location);
@@ -117,34 +109,10 @@ export class ColumnCrop implements BlockCustomComponent {
             return;
         }
 
-        // Verificar maleza
-        if (!this.opts.immuneToWeeds) {
-            const quality = getCropQuality(block);
-            const isWild = quality === 0;
-            const isSand = blockBelow.typeId.includes('sand');
-
-            if (this.opts.weedProbability > 0 && isWild && !isSand) {
-                const combinedWeedChance = (this.opts.weedProbability + risks.weedChance) * 0.5;
-                if (combinedWeedChance > 0 && Math.random() < combinedWeedChance) {
-                    this.turnToWeed(block);
-                    return;
-                }
-            }
-        }
-
-        // Verificar pudrición
-        const isImmuneToRot = this.opts.maxHydro === 10;
-        if (!isImmuneToRot && risks.rotChance > 0 && Math.random() < risks.rotChance) {
-            if (!isPreferred) {
+        // Verificar pudrición (solo cultivos no acuáticos puros)
+        if (this.opts.maxHydro < 10 && risks.rotChance > 0 && !isPreferred) {
+            if (Math.random() < risks.rotChance) {
                 this.killColumn(block, 'rotten');
-                return;
-            }
-        }
-
-        // Verificar evaporación
-        if (!this.opts.requiredWaterSource && risks.evaporationChance > 0.3) {
-            if (!isPreferred && Math.random() < risks.evaporationChance) {
-                this.killColumn(block, 'dead');
                 return;
             }
         }
@@ -152,43 +120,15 @@ export class ColumnCrop implements BlockCustomComponent {
         const deltaTicks = currentTick - stored.lastTick;
         if (deltaTicks <= 0) return;
 
-        let growthMultiplier = isPreferred ? 1.5 : 1.0;
-
-        if (blockBelow.typeId === WOC_FARMLAND_ID && currentSoilHydro < this.opts.minHydro) {
-            growthMultiplier *= 0.2;
-        }
-
+        const growthMultiplier = isPreferred ? 1.5 : 1.0;
         const gainedProgress = Math.floor(deltaTicks * growthMultiplier);
-        let newTotalProgress = stored.progress + gainedProgress;
+        const newTotalProgress = stored.progress + gainedProgress;
 
         // Procesar crecimiento de columna
-        this.processColumnGrowth(
-            block,
-            blockBelow,
-            newTotalProgress,
-            currentTick,
-            currentSoilHydro,
-        );
+        this.processColumnGrowth(block, newTotalProgress, currentTick);
     }
 
-    private checkWaterRequirement(blockBelow: Block): boolean {
-        if (hasAdjacentWater(blockBelow)) return true;
-
-        if (blockBelow.typeId === WOC_FARMLAND_ID) {
-            const hydro = getHydration(blockBelow);
-            return hydro >= this.opts.minHydro;
-        }
-
-        return false;
-    }
-
-    private processColumnGrowth(
-        block: Block,
-        blockBelow: Block,
-        progress: number,
-        currentTick: number,
-        hydration: number,
-    ) {
+    private processColumnGrowth(block: Block, progress: number, currentTick: number) {
         let newTotalProgress = progress;
         let { currentHeight, airBlock } = this.scanUpwards(block);
 
@@ -198,10 +138,7 @@ export class ColumnCrop implements BlockCustomComponent {
             airBlock
         ) {
             const produced = getProducedCount(block);
-            const fertilizerLevel =
-                blockBelow.typeId === WOC_FARMLAND_ID ? getFertilizerLevel(blockBelow) : 0;
-
-            const maxLifeGrowths = 5 + fertilizerLevel;
+            const maxLifeGrowths = this.opts.maxLifeGrowths;
 
             if (produced >= maxLifeGrowths) {
                 this.killColumn(block, 'dead');
@@ -222,11 +159,6 @@ export class ColumnCrop implements BlockCustomComponent {
             block.dimension.playSound('dig.grass', airBlock.location);
             setProducedCount(block, Math.min(10, produced + 1));
 
-            // Consumir fertilizante ocasionalmente
-            if (fertilizerLevel > 0) {
-                tryConsumeFertilizer(blockBelow, 0.3);
-            }
-
             newTotalProgress -= this.opts.growthTicks;
             currentHeight++;
             airBlock = airBlock.above(1);
@@ -238,7 +170,7 @@ export class ColumnCrop implements BlockCustomComponent {
             newTotalProgress = Math.min(newTotalProgress, this.opts.growthTicks - 1);
         }
 
-        ScoreboardRepository.save(block, currentTick, newTotalProgress, hydration);
+        ScoreboardRepository.save(block, currentTick, newTotalProgress, 0);
     }
 
     private handlePlayerInteract(e: BlockComponentPlayerInteractEvent) {
@@ -309,23 +241,9 @@ export class ColumnCrop implements BlockCustomComponent {
     private spawnDrops(block: Block, dimension: Dimension) {
         let multiplier = 1.0;
 
-        let base = block;
-        let safety = 0;
-        while (base.below(1)?.typeId === this.opts.id && safety < 5) {
-            base = base.below(1)!;
-            safety++;
-        }
-
-        const blockBelow = base.below(1);
-
-        if (blockBelow?.typeId === WOC_FARMLAND_ID) {
-            const fertilizer = getFertilizerLevel(blockBelow);
-            multiplier += fertilizer * this.opts.fertilizerDropFacor;
-        }
-
         const biome = dimension.getBiome(block.location);
         if (isPreferredBiome(biome.id, this.opts.preferredBiomes)) {
-            multiplier *= 1.5;
+            multiplier = 1.5;
         }
 
         const dropCount = Math.round(this.opts.baseDrops * multiplier);
@@ -379,20 +297,6 @@ export class ColumnCrop implements BlockCustomComponent {
             variant: this.opts.variant,
             deadBlockType: 'column',
         });
-    }
-
-    private turnToWeed(baseBlock: Block) {
-        // Destruir segmentos superiores
-        let pointer = baseBlock.above(1);
-        let safety = 0;
-        while (pointer && pointer.typeId === this.opts.id && safety < 5) {
-            pointer.setType('minecraft:air');
-            pointer = pointer.above(1);
-            safety++;
-        }
-
-        // Convertir base a maleza
-        turnToWeed(baseBlock);
     }
 
     toProxy(): BlockCustomComponent {

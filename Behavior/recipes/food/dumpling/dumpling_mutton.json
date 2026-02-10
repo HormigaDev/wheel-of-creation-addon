@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:dumpling_mutton"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "woc:cabbage_leaf" },
+            { "item": "minecraft:cooked_mutton" },
+            { "item": "woc:wheat_dough" }
+        ],
+        "result": [{ "item": "woc:dumplings", "count": 2 }]
+    }
+}

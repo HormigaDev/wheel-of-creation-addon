@@ -52,6 +52,16 @@ export const SEED_TO_CROP_MAP: Readonly<Record<string, string>> = {
     'woc:melon_seeds': 'woc:melon_stem',
     'woc:pumpkin_seeds': 'woc:pumpkin_stem',
     'woc:select_sugar_cane': 'woc:column_sugar_cane',
+
+    // Cultivos de vectorwing
+    'woc:onion': 'woc:onions',
+    'woc:select_onion': 'woc:onions',
+    'woc:cabbage_seeds': 'woc:cabbages',
+    'woc:select_cabbage_seeds': 'woc:cabbages',
+    'woc:tomato_seeds': 'woc:tomatoes',
+    'woc:select_tomato_seeds': 'woc:tomatoes',
+    'woc:rice_panicle': 'woc:rices',
+    'woc:select_rice_panicle': 'woc:rices',
 };
 
 /**
@@ -65,6 +75,10 @@ export const QUALITY_SEED_ITEMS: ReadonlySet<string> = new Set([
     'woc:melon_seeds',
     'woc:pumpkin_seeds',
     'woc:select_sugar_cane',
+    'woc:select_onion',
+    'woc:select_cabbage_seeds',
+    'woc:select_tomato_seeds',
+    'woc:select_rice_panicle',
 ]);
 
 /**

@@ -1,0 +1,16 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:tomato_sauce_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "woc:tomato" },
+            { "item": "woc:tomato" },
+            { "item": "woc:onion" }
+        ],
+        "result": { "item": "woc:tomato_sauce", "count": 1 }
+    }
+}

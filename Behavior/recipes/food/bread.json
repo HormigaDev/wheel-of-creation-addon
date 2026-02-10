@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "woc:cooking_bread"
+        },
+        "tags": ["furnace", "smoker", "campfire"],
+        "input": {
+            "item": "woc:wheat_dough"
+        },
+        "output": {
+            "item": "minecraft:bread"
+        }
+    }
+}

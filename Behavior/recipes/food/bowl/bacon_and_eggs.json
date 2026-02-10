@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:bacon_and_eggs_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "woc:cooked_bacon" },
+            { "item": "woc:cooked_egg" }
+        ],
+        "result": { "item": "woc:bacon_and_eggs", "count": 1 }
+    }
+}

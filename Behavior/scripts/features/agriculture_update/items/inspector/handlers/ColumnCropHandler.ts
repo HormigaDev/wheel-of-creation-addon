@@ -38,7 +38,7 @@ export class ColumnCropHandler implements BlockInspectorHandler {
             components.push({ translate: 'woc.inspector.preferred_biome' });
         }
 
-        this.appendWaterRequirementInfo(components, ctx.block, config);
+        this.appendWaterRequirementInfo(components, ctx.block);
 
         return components;
     }
@@ -84,13 +84,7 @@ export class ColumnCropHandler implements BlockInspectorHandler {
         });
     }
 
-    private appendWaterRequirementInfo(
-        components: (RawMessage | string)[],
-        block: Block,
-        config: (typeof COLUMN_CROP_REGISTRY)[string],
-    ): void {
-        if (!config.requiredWaterSource) return;
-
+    private appendWaterRequirementInfo(components: (RawMessage | string)[], block: Block): void {
         const hasWater = checkWaterSource(block);
         if (!hasWater) {
             components.push('\n');

@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "woc:cooked_bacon_recipe"
+        },
+        "tags": ["furnace", "smoker", "campfire"],
+        "input": {
+            "item": "woc:bacon"
+        },
+        "output": {
+            "item": "woc:cooked_bacon"
+        }
+    }
+}

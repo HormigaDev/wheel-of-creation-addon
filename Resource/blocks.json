@@ -3,7 +3,7 @@
     "woc:wheat": { "sound": "grass" },
     "woc:carrots": { "sound": "grass" },
     "woc:potatoes": { "sound": "grass" },
-    "woc:beetroots": { "sound": "grass" },
+    "woc:beetroots": { "sound": "wood" },
     "woc:dead_crop": { "sound": "grass" },
     "woc:weed": { "sound": "grass" },
     "woc:farmland": { "sound": "gravel" },
@@ -12,5 +12,9 @@
     "woc:melon_stem": { "sound": "grass" },
     "woc:stem_dead_crop": { "sound": "grass" },
     "woc:column_sugar_cane": { "sound": "grass" },
-    "woc:column_dead_crop": { "sound": "grass" }
+    "woc:column_dead_crop": { "sound": "grass" },
+    "woc:tomatoes": { "sound": "grass" },
+    "woc:onions": { "sound": "grass" },
+    "woc:cabbages": { "sound": "grass" },
+    "woc:rices": { "sound": "grass" }
 }

@@ -17,7 +17,8 @@
             "woc:diet_book_logic": {},
             "minecraft:use_modifiers": {
                 "use_duration": 1.0
-            }
+            },
+            "minecraft:glint": true
         }
     }
 }

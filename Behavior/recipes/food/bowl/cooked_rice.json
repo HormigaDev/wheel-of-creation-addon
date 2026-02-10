@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:cooked_rice_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "woc:rice" },
+            { "item": "woc:rice" }
+        ],
+        "result": { "item": "woc:cooked_rice", "count": 1 }
+    }
+}

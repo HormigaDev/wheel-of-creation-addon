@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:bone_broth_recipe"
+        },
+        "tags": ["crafting_table"],
+        "ingredients": [
+            { "item": "minecraft:bowl" },
+            { "item": "minecraft:bone" },
+            { "item": "woc:onion" }
+        ],
+        "result": { "item": "woc:bone_broth", "count": 1 }
+    }
+}

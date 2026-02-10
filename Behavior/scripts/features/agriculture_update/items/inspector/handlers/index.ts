@@ -2,6 +2,7 @@ import { BlockInspectorHandler } from '../types';
 import { BaseCropHandler } from './BaseCropHandler';
 import { StemCropHandler } from './StemCropHandler';
 import { ColumnCropHandler } from './ColumnCropHandler';
+import { WaterCropHandler } from './WaterCropHandler';
 import { FarmlandHandler } from './FarmlandHandler';
 import { ComposterHandler } from './ComposterHandler';
 import { DeadCropHandler } from './DeadCropHandler';
@@ -13,6 +14,7 @@ import { DeadCropHandler } from './DeadCropHandler';
 export const BLOCK_HANDLERS: BlockInspectorHandler[] = [
     new BaseCropHandler(),
     new StemCropHandler(),
+    new WaterCropHandler(),
     new FarmlandHandler(),
     new ColumnCropHandler(),
     new ComposterHandler(),
@@ -29,6 +31,7 @@ export function findHandler(block: { typeId: string }): BlockInspectorHandler | 
 export { BaseCropHandler } from './BaseCropHandler';
 export { StemCropHandler } from './StemCropHandler';
 export { ColumnCropHandler } from './ColumnCropHandler';
+export { WaterCropHandler } from './WaterCropHandler';
 export { FarmlandHandler } from './FarmlandHandler';
 export { ComposterHandler } from './ComposterHandler';
 export { DeadCropHandler } from './DeadCropHandler';

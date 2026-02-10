@@ -43,6 +43,12 @@ export const BASE_CROP_VARIANTS: Readonly<Record<string, number>> = {
     potato: 2,
     beetroots: 3,
     beetroot: 3,
+    onion: 4,
+    onions: 4,
+    cabbage: 5,
+    cabbages: 5,
+    tomato: 6,
+    tomatoes: 6,
 };
 
 /**
