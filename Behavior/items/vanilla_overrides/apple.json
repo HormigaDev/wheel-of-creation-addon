@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.50",
+    "format_version": "1.20.30",
     "minecraft:item": {
         "description": {
             "identifier": "minecraft:apple",
@@ -17,13 +17,10 @@
                 "tags": ["minecraft:is_food"]
             },
             "minecraft:use_animation": "eat",
-            "minecraft:use_modifiers": {
-                "use_duration": 1.6,
-                "movement_modifier": 1.0
-            },
+            "minecraft:use_duration": 1.6,
             "minecraft:food": {
                 "nutrition": 2,
-                "saturation_modifier": 0.1
+                "saturation_modifier": 0.4
             }
         }
     }
