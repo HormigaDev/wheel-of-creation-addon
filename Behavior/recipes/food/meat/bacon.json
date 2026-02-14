@@ -1,0 +1,14 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "woc:bacon"
+        },
+        "tags": ["stonecutter"],
+        "ingredients": [{ "item": "minecraft:porkchop" }],
+        "result": {
+            "item": "woc:bacon",
+            "count": 2
+        }
+    }
+}

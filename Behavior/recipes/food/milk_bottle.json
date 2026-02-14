@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "woc:milk_bottle_recipe"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["###", "#W#", "###"],
+        "key": {
+            "#": {
+                "item": "minecraft:glass_bottle"
+            },
+            "W": {
+                "item": "minecraft:bucket",
+                "data": 1
+            }
+        },
+        "result": [
+            { "item": "woc:milk_bottle", "count": 8 },
+            { "item": "minecraft:bucket", "count": 1, "data": 0 }
+        ]
+    }
+}

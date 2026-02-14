@@ -22,7 +22,7 @@
                         {
                             "wants": [
                                 {
-                                    "item": "woc:potato",
+                                    "item": "minecraft:potato",
                                     "quantity": 26,
                                     "price_multiplier": 0.05
                                 }
@@ -35,7 +35,7 @@
                         {
                             "wants": [
                                 {
-                                    "item": "woc:carrot",
+                                    "item": "minecraft:carrot",
                                     "quantity": 22,
                                     "price_multiplier": 0.05
                                 }
@@ -118,7 +118,7 @@
                                 }
                             ],
                             "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
-                            "trader_exp": 10,
+                            "trader_exp": 5,
                             "max_uses": 12,
                             "reward_exp": true
                         }
@@ -130,14 +130,14 @@
                         {
                             "wants": [{ "item": "minecraft:emerald", "quantity": 1 }],
                             "gives": [{ "item": "minecraft:pumpkin_pie", "quantity": 4 }],
-                            "trader_exp": 5,
+                            "trader_exp": 3,
                             "max_uses": 12,
                             "reward_exp": true
                         },
                         {
                             "wants": [{ "item": "minecraft:emerald", "quantity": 1 }],
                             "gives": [{ "item": "minecraft:apple", "quantity": 4 }],
-                            "trader_exp": 5,
+                            "trader_exp": 3,
                             "max_uses": 16,
                             "reward_exp": true
                         }
@@ -155,8 +155,8 @@
                                 }
                             ],
                             "gives": [{ "item": "woc:wheat_seeds", "quantity": 1 }],
-                            "trader_exp": 10,
-                            "max_uses": 8,
+                            "trader_exp": 5,
+                            "max_uses": 6,
                             "reward_exp": true
                         },
                         {
@@ -168,8 +168,8 @@
                                 }
                             ],
                             "gives": [{ "item": "woc:beetroot_seeds", "quantity": 1 }],
-                            "trader_exp": 10,
-                            "max_uses": 8,
+                            "trader_exp": 5,
+                            "max_uses": 6,
                             "reward_exp": true
                         }
                     ]
@@ -191,7 +191,7 @@
                                 }
                             ],
                             "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
-                            "trader_exp": 20,
+                            "trader_exp": 10,
                             "max_uses": 12,
                             "reward_exp": true
                         }
@@ -203,14 +203,14 @@
                         {
                             "wants": [{ "item": "minecraft:emerald", "quantity": 3 }],
                             "gives": [{ "item": "minecraft:cookie", "quantity": 18 }],
-                            "trader_exp": 10,
+                            "trader_exp": 5,
                             "max_uses": 12,
                             "reward_exp": true
                         }
                     ]
                 },
                 {
-                    "num_to_select": 2,
+                    "num_to_select": 1,
                     "trades": [
                         {
                             "wants": [
@@ -220,9 +220,9 @@
                                     "price_multiplier": 0.05
                                 }
                             ],
-                            "gives": [{ "item": "minecraft:carrot", "quantity": 1 }],
-                            "trader_exp": 15,
-                            "max_uses": 8,
+                            "gives": [{ "item": "woc:carrot", "quantity": 1 }],
+                            "trader_exp": 8,
+                            "max_uses": 6,
                             "reward_exp": true
                         },
                         {
@@ -233,19 +233,101 @@
                                     "price_multiplier": 0.05
                                 }
                             ],
-                            "gives": [{ "item": "minecraft:potato", "quantity": 1 }],
-                            "trader_exp": 15,
-                            "max_uses": 8,
+                            "gives": [{ "item": "woc:potato", "quantity": 1 }],
+                            "trader_exp": 8,
+                            "max_uses": 6,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 8,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "woc:pumpkin_seeds", "quantity": 1 }],
+                            "trader_exp": 8,
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 8,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "woc:melon_seeds", "quantity": 1 }],
+                            "trader_exp": 8,
+                            "max_uses": 4,
                             "reward_exp": true
                         }
                     ]
                 }
             ]
         },
-
         {
             "total_exp_required": 150,
             "groups": [
+                {
+                    "num_to_select": 2,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "woc:tomato",
+                                    "quantity": 20,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 12,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "woc:cabbage",
+                                    "quantity": 12,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 12,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "woc:onion",
+                                    "quantity": 22,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 12,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "woc:rice",
+                                    "quantity": 26,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 12,
+                            "reward_exp": true
+                        }
+                    ]
+                },
                 {
                     "num_to_select": 1,
                     "trades": [
@@ -263,32 +345,32 @@
                                     ]
                                 }
                             ],
-                            "trader_exp": 15,
+                            "trader_exp": 8,
                             "max_uses": 12,
                             "reward_exp": true
                         },
                         {
                             "wants": [{ "item": "minecraft:emerald", "quantity": 1 }],
                             "gives": [{ "item": "minecraft:cake", "quantity": 1 }],
-                            "trader_exp": 15,
+                            "trader_exp": 8,
                             "max_uses": 12,
                             "reward_exp": true
                         }
                     ]
                 },
                 {
-                    "num_to_select": 1,
+                    "num_to_select": 2,
                     "trades": [
                         {
                             "wants": [
                                 {
                                     "item": "minecraft:emerald",
-                                    "quantity": 8,
+                                    "quantity": 6,
                                     "price_multiplier": 0.05
                                 }
                             ],
-                            "gives": [{ "item": "woc:pumpkin_seeds", "quantity": 1 }],
-                            "trader_exp": 20,
+                            "gives": [{ "item": "woc:select_tomato_seeds", "quantity": 1 }],
+                            "trader_exp": 10,
                             "max_uses": 4,
                             "reward_exp": true
                         },
@@ -296,12 +378,38 @@
                             "wants": [
                                 {
                                     "item": "minecraft:emerald",
-                                    "quantity": 8,
+                                    "quantity": 6,
                                     "price_multiplier": 0.05
                                 }
                             ],
-                            "gives": [{ "item": "woc:melon_seeds", "quantity": 1 }],
-                            "trader_exp": 20,
+                            "gives": [{ "item": "woc:select_cabbage_seeds", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 6,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "woc:select_onion", "quantity": 1 }],
+                            "trader_exp": 10,
+                            "max_uses": 4,
+                            "reward_exp": true
+                        },
+                        {
+                            "wants": [
+                                {
+                                    "item": "minecraft:emerald",
+                                    "quantity": 6,
+                                    "price_multiplier": 0.05
+                                }
+                            ],
+                            "gives": [{ "item": "woc:select_rice_panicle", "quantity": 1 }],
+                            "trader_exp": 10,
                             "max_uses": 4,
                             "reward_exp": true
                         }

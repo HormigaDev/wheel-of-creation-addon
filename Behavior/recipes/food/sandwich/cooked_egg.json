@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "woc:cooked_egg"
+        },
+        "tags": ["furnace", "smoker", "campfire"],
+        "input": {
+            "item": "minecraft:egg"
+        },
+        "output": {
+            "item": "woc:cooked_egg"
+        }
+    }
+}

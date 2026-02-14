@@ -189,6 +189,170 @@
         "woc_compost": { "textures": "textures/blocks/compost" },
         "woc_compost_ready": { "textures": "textures/blocks/compost_ready" },
         "woc_sugar_cane": { "textures": "textures/blocks/reeds" },
-        "woc_sugar_cane_dead": { "textures": "textures/blocks/crops/dead/sugar_cane_dead" }
+        "woc_sugar_cane_dead": { "textures": "textures/blocks/crops/dead/sugar_cane_dead" },
+
+        "woc_onions_stage_0": { "textures": "textures/vectorwing/blocks/onions_stage0" },
+        "woc_onions_stage_1": { "textures": "textures/vectorwing/blocks/onions_stage1" },
+        "woc_onions_stage_2": { "textures": "textures/vectorwing/blocks/onions_stage2" },
+        "woc_onions_stage_3": { "textures": "textures/vectorwing/blocks/onions_stage3" },
+
+        "woc_onions_stage_0_dead": { "textures": "textures/blocks/crops/dead/onions_stage0_dead" },
+        "woc_onions_stage_1_dead": { "textures": "textures/blocks/crops/dead/onions_stage1_dead" },
+        "woc_onions_stage_2_dead": { "textures": "textures/blocks/crops/dead/onions_stage2_dead" },
+        "woc_onions_stage_3_dead": { "textures": "textures/blocks/crops/dead/onions_stage3_dead" },
+        "woc_onions_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage0_rotten"
+        },
+        "woc_onions_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage1_rotten"
+        },
+        "woc_onions_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage2_rotten"
+        },
+        "woc_onions_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage3_rotten"
+        },
+        "woc_cabbages_stage_0": { "textures": "textures/vectorwing/blocks/cabbages_stage0" },
+        "woc_cabbages_stage_1": { "textures": "textures/vectorwing/blocks/cabbages_stage1" },
+        "woc_cabbages_stage_2": { "textures": "textures/vectorwing/blocks/cabbages_stage2" },
+        "woc_cabbages_stage_3": { "textures": "textures/vectorwing/blocks/cabbages_stage3" },
+        "woc_cabbages_stage_4": { "textures": "textures/vectorwing/blocks/cabbages_stage4" },
+        "woc_cabbages_stage_5": { "textures": "textures/vectorwing/blocks/cabbages_stage5" },
+        "woc_cabbages_stage_6": { "textures": "textures/vectorwing/blocks/cabbages_stage6" },
+        "woc_cabbages_stage_7": { "textures": "textures/vectorwing/blocks/cabbages_stage7" },
+
+        "woc_cabbages_stage_0_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage0_dead"
+        },
+        "woc_cabbages_stage_1_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage1_dead"
+        },
+        "woc_cabbages_stage_2_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage2_dead"
+        },
+        "woc_cabbages_stage_3_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage3_dead"
+        },
+        "woc_cabbages_stage_4_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage4_dead"
+        },
+        "woc_cabbages_stage_5_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage5_dead"
+        },
+        "woc_cabbages_stage_6_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage6_dead"
+        },
+        "woc_cabbages_stage_7_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage7_dead"
+        },
+
+        "woc_cabbages_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage0_rotten"
+        },
+        "woc_cabbages_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage1_rotten"
+        },
+        "woc_cabbages_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage2_rotten"
+        },
+        "woc_cabbages_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage3_rotten"
+        },
+        "woc_cabbages_stage_4_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage4_rotten"
+        },
+        "woc_cabbages_stage_5_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage5_rotten"
+        },
+        "woc_cabbages_stage_6_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage6_rotten"
+        },
+        "woc_cabbages_stage_7_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage7_rotten"
+        },
+
+        "woc_tomatoes_stage_0": {
+            "textures": "textures/vectorwing/blocks/budding_tomatoes_stage0"
+        },
+        "woc_tomatoes_stage_1": {
+            "textures": "textures/vectorwing/blocks/budding_tomatoes_stage1"
+        },
+        "woc_tomatoes_stage_2": {
+            "textures": "textures/vectorwing/blocks/budding_tomatoes_stage2"
+        },
+        "woc_tomatoes_stage_3": {
+            "textures": "textures/vectorwing/blocks/budding_tomatoes_stage3"
+        },
+        "woc_tomatoes_stage_4": { "textures": "textures/vectorwing/blocks/tomatoes_stage0" },
+        "woc_tomatoes_stage_5": { "textures": "textures/vectorwing/blocks/tomatoes_stage1" },
+        "woc_tomatoes_stage_6": { "textures": "textures/vectorwing/blocks/tomatoes_stage2" },
+        "woc_tomatoes_stage_7": { "textures": "textures/vectorwing/blocks/tomatoes_stage3" },
+
+        "woc_tomatoes_stage_0_dead": {
+            "textures": "textures/blocks/crops/dead/budding_tomatoes_stage0_dead"
+        },
+        "woc_tomatoes_stage_1_dead": {
+            "textures": "textures/blocks/crops/dead/budding_tomatoes_stage1_dead"
+        },
+        "woc_tomatoes_stage_2_dead": {
+            "textures": "textures/blocks/crops/dead/budding_tomatoes_stage2_dead"
+        },
+        "woc_tomatoes_stage_3_dead": {
+            "textures": "textures/blocks/crops/dead/budding_tomatoes_stage3_dead"
+        },
+        "woc_tomatoes_stage_4_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage0_dead"
+        },
+        "woc_tomatoes_stage_5_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage1_dead"
+        },
+        "woc_tomatoes_stage_6_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage2_dead"
+        },
+        "woc_tomatoes_stage_7_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage3_dead"
+        },
+        "woc_tomatoes_stage_0_rotten": {
+            "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage0_rotten"
+        },
+        "woc_tomatoes_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage1_rotten"
+        },
+        "woc_tomatoes_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage2_rotten"
+        },
+        "woc_tomatoes_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage3_rotten"
+        },
+        "woc_tomatoes_stage_4_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage0_rotten"
+        },
+        "woc_tomatoes_stage_5_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage1_rotten"
+        },
+        "woc_tomatoes_stage_6_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage2_rotten"
+        },
+        "woc_tomatoes_stage_7_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage3_rotten"
+        },
+
+        "woc_rice_base_stage_0": { "textures": "textures/vectorwing/blocks/rice_stage0" },
+        "woc_rice_base_stage_1": { "textures": "textures/vectorwing/blocks/rice_stage1" },
+        "woc_rice_base_stage_2": { "textures": "textures/vectorwing/blocks/rice_stage2" },
+        "woc_rice_base_stage_3": { "textures": "textures/vectorwing/blocks/rice_stage3" },
+        "woc_rice_base_stage_4": { "textures": "textures/vectorwing/blocks/rice_supporting" },
+        "woc_rice_panicle_stage_0": {
+            "textures": "textures/vectorwing/blocks/rice_panicles_stage0"
+        },
+        "woc_rice_panicle_stage_1": {
+            "textures": "textures/vectorwing/blocks/rice_panicles_stage1"
+        },
+        "woc_rice_panicle_stage_2": {
+            "textures": "textures/vectorwing/blocks/rice_panicles_stage2"
+        },
+        "woc_rice_panicle_stage_3": {
+            "textures": "textures/vectorwing/blocks/rice_panicles_stage3"
+        }
     }
 }

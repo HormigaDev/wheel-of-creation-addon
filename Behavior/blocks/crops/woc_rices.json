@@ -1,0 +1,199 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:rices",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.crop"
+            },
+            "states": {
+                "woc:type": [0, 1],
+                "woc:quality": [0, 1],
+                "woc:base_stage": [0, 1, 2, 3, 4],
+                "woc:panicle_stage": [0, 1, 2, 3],
+                "woc:fertilizer_level": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            }
+        },
+        "components": {
+            "tag:minecraft:crop": {},
+            "tag:crop": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.woc_column_crop",
+            "minecraft:collision_box": {
+                "origin": [0, 0, 0],
+                "size": [0, 0, 0]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:material_instances": {
+                "*": { "texture": "woc_rice_base_stage_0", "render_method": "alpha_test" }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": [
+                            "minecraft:dirt",
+                            "minecraft:mud",
+                            "woc:rices",
+                            "minecraft:grass_block"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.0 },
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:custom_components": ["woc:rices_logic"],
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "can_contain_liquid": true,
+                        "liquid_type": "water",
+                        "on_liquid_touches": "no_reaction"
+                    }
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:base_stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_base_stage_0",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 5, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:base_stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_base_stage_1",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 10, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:base_stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_base_stage_2",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 14, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:base_stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_base_stage_3",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:base_stage') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_base_stage_4",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:panicle_stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_panicle_stage_0",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 9, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:panicle_stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_panicle_stage_1",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 13, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:panicle_stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_panicle_stage_2",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 14, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:panicle_stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_rice_panicle_stage_3",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    }
+                }
+            }
+        ]
+    }
+}
