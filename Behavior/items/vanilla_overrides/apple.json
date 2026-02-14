@@ -5,7 +5,6 @@
             "identifier": "minecraft:apple",
             "category": "nature"
         },
-
         "components": {
             "minecraft:icon": {
                 "texture": "apple"
@@ -14,13 +13,16 @@
                 "value": "item.apple.name"
             },
             "minecraft:tags": {
-                "tags": ["minecraft:is_food"]
+                "tags": [
+                    "minecraft:is_food"
+                ]
             },
             "minecraft:use_animation": "eat",
             "minecraft:use_duration": 1.6,
             "minecraft:food": {
                 "nutrition": 2,
-                "saturation_modifier": 0.4
+                "saturation_modifier": 0.4,
+                "can_always_eat": false
             }
         }
     }

@@ -4,13 +4,12 @@
         "description": {
             "identifier": "minecraft:golden_carrot"
         },
-
         "components": {
             "minecraft:use_duration": 32,
-
             "minecraft:food": {
                 "nutrition": 4,
-                "saturation_modifier": "normal"
+                "saturation_modifier": "normal",
+                "can_always_eat": false
             }
         }
     }

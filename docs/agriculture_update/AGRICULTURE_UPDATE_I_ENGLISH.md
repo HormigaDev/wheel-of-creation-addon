@@ -24,11 +24,13 @@
 
 <div align="center">
 
-### 🚧 Agriculture Update I — More Coming Soon!
+### 🌾 Agriculture Update I — Part of an Expanding Series
 
-This is the **first release** of the Agriculture Update series. Stay tuned for **Agriculture Update II**, which will introduce:
+This is the **first release** of the Agriculture Update series. The **Agriculture Update II** is now available with:
 
-🥗 **Diet & Nutrition System** | 🍳 **Cooking Recipes** | 🌽 **New Crop Varieties** | 🥧 **Food Processing**
+🥗 **Diet & Nutrition System** | 🍳 **29 Cooking Recipes** | 🌽 **4 New Crops (Tomato, Cabbage, Onion, Rice)** | 🥧 **Food Processing & Vanilla Rebalancing**
+
+👉 **[Read Agriculture Update II](./AGRICULTURE_UPDATE_II_ENGLISH.md)**
 
 </div>
 

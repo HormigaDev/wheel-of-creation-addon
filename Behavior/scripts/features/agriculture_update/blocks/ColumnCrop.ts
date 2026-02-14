@@ -16,6 +16,7 @@ import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
 import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     ColumnCropOptions,
+    DEAD_CROP_BLOCKS,
     getCropQuality,
     getProducedCount,
     setProducedCount,
@@ -294,8 +295,8 @@ export class ColumnCrop implements BlockCustomComponent {
         killCrop({
             block: baseBlock,
             deathType: type,
+            deadBlockId: DEAD_CROP_BLOCKS.column,
             variant: this.opts.variant,
-            deadBlockType: 'column',
         });
     }
 

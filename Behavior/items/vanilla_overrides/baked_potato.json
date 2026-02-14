@@ -4,12 +4,12 @@
         "description": {
             "identifier": "minecraft:baked_potato"
         },
-
         "components": {
             "minecraft:use_duration": 32,
             "minecraft:food": {
                 "nutrition": 3,
-                "saturation_modifier": "poor"
+                "saturation_modifier": "poor",
+                "can_always_eat": false
             }
         }
     }

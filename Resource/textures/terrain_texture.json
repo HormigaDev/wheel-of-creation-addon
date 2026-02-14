@@ -197,8 +197,20 @@
         "woc_onions_stage_3": { "textures": "textures/vectorwing/blocks/onions_stage3" },
 
         "woc_onions_stage_0_dead": { "textures": "textures/blocks/crops/dead/onions_stage0_dead" },
+        "woc_onions_stage_1_dead": { "textures": "textures/blocks/crops/dead/onions_stage1_dead" },
+        "woc_onions_stage_2_dead": { "textures": "textures/blocks/crops/dead/onions_stage2_dead" },
+        "woc_onions_stage_3_dead": { "textures": "textures/blocks/crops/dead/onions_stage3_dead" },
         "woc_onions_stage_0_rotten": {
-            "textures": "textures/blocks/crops/rotten/onions/stage0_rotten"
+            "textures": "textures/blocks/crops/rotten/onions_stage0_rotten"
+        },
+        "woc_onions_stage_1_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage1_rotten"
+        },
+        "woc_onions_stage_2_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage2_rotten"
+        },
+        "woc_onions_stage_3_rotten": {
+            "textures": "textures/blocks/crops/rotten/onions_stage3_rotten"
         },
         "woc_cabbages_stage_0": { "textures": "textures/vectorwing/blocks/cabbages_stage0" },
         "woc_cabbages_stage_1": { "textures": "textures/vectorwing/blocks/cabbages_stage1" },
@@ -221,6 +233,18 @@
         "woc_cabbages_stage_3_dead": {
             "textures": "textures/blocks/crops/dead/cabbages_stage3_dead"
         },
+        "woc_cabbages_stage_4_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage4_dead"
+        },
+        "woc_cabbages_stage_5_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage5_dead"
+        },
+        "woc_cabbages_stage_6_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage6_dead"
+        },
+        "woc_cabbages_stage_7_dead": {
+            "textures": "textures/blocks/crops/dead/cabbages_stage7_dead"
+        },
 
         "woc_cabbages_stage_0_rotten": {
             "textures": "textures/blocks/crops/rotten/cabbages_stage0_rotten"
@@ -233,6 +257,18 @@
         },
         "woc_cabbages_stage_3_rotten": {
             "textures": "textures/blocks/crops/rotten/cabbages_stage3_rotten"
+        },
+        "woc_cabbages_stage_4_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage4_rotten"
+        },
+        "woc_cabbages_stage_5_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage5_rotten"
+        },
+        "woc_cabbages_stage_6_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage6_rotten"
+        },
+        "woc_cabbages_stage_7_rotten": {
+            "textures": "textures/blocks/crops/rotten/cabbages_stage7_rotten"
         },
 
         "woc_tomatoes_stage_0": {
@@ -264,6 +300,18 @@
         "woc_tomatoes_stage_3_dead": {
             "textures": "textures/blocks/crops/dead/budding_tomatoes_stage3_dead"
         },
+        "woc_tomatoes_stage_4_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage0_dead"
+        },
+        "woc_tomatoes_stage_5_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage1_dead"
+        },
+        "woc_tomatoes_stage_6_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage2_dead"
+        },
+        "woc_tomatoes_stage_7_dead": {
+            "textures": "textures/blocks/crops/dead/tomatoes_stage3_dead"
+        },
         "woc_tomatoes_stage_0_rotten": {
             "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage0_rotten"
         },
@@ -275,6 +323,18 @@
         },
         "woc_tomatoes_stage_3_rotten": {
             "textures": "textures/blocks/crops/rotten/budding_tomatoes_stage3_rotten"
+        },
+        "woc_tomatoes_stage_4_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage0_rotten"
+        },
+        "woc_tomatoes_stage_5_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage1_rotten"
+        },
+        "woc_tomatoes_stage_6_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage2_rotten"
+        },
+        "woc_tomatoes_stage_7_rotten": {
+            "textures": "textures/blocks/crops/rotten/tomatoes_stage3_rotten"
         },
 
         "woc_rice_base_stage_0": { "textures": "textures/vectorwing/blocks/rice_stage0" },

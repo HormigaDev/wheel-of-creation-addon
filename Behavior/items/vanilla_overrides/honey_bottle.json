@@ -10,9 +10,11 @@
             "minecraft:food": {
                 "nutrition": 3,
                 "saturation_modifier": "normal",
-                "can_always_eat": true,
+                "can_always_eat": false,
                 "using_converts_to": "glass_bottle",
-                "remove_effects": ["poison"]
+                "remove_effects": [
+                    "poison"
+                ]
             }
         }
     }

@@ -1,5 +1,5 @@
 - SIEMPRE USA EL IDIOMA ESPAÑOL.
 - Las sugerencias siempre deben ser enfocados en la optimización de código (performance) dado que el proyecto es un addon de Minecraft Bedrock Edition, por lo que el rendimiento es crucial.
-- Evita sugerencias que puedan aumentar la complejidad del código o que no sean necesarias para mejorar el rendimiento.
+- Evita sugerencias que no sean necesarias para mejorar el rendimiento.
 - Si el código es difícil de entender, sugiere formas de simplificarlo sin sacrificar la claridad.
 - Si el código tiene redundancias, sugiere formas de eliminarlas para mejorar la eficiencia.

@@ -135,9 +135,23 @@ woc.crop.melon.dead=Caule de Melancia Seco
 woc.crop.melon.rotten=Caule de Melancia Podre
 woc.crop.pumpkin.dead=Caule de Abóbora Seco
 woc.crop.pumpkin.rotten=Caule de Abóbora Podre
+woc.crop.onions.dead=Cebolas Secas
+woc.crop.onions.rotten=Cebolas Podres
+woc.crop.cabbages.dead=Repolhos Secos
+woc.crop.cabbages.rotten=Repolhos Podres
+woc.crop.tomatoes.dead=Tomates Secos
+woc.crop.tomatoes.rotten=Tomates Podres
 woc.crop.sugar_cane.dead=Cana-de-Açúcar Seca
 woc.crop.unknown.dead=Cultura Morta
 woc.crop.unknown.rotten=Cultura Podre
+
+tile.woc:dead_wheat.name=Trigo Seco
+tile.woc:dead_carrots.name=Cenoura Seca
+tile.woc:dead_potatoes.name=Batatas Secas
+tile.woc:dead_beetroots.name=Beterrabas Secas
+tile.woc:dead_onions.name=Cebolas Secas
+tile.woc:dead_cabbages.name=Repolhos Secos
+tile.woc:dead_tomatoes.name=Tomates Secos
 
 block.woc.better_composter.name=Compostor Melhorado
 

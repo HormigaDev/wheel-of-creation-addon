@@ -22,11 +22,13 @@
 
 <div align="center">
 
-### 🚧 Agriculture Update I — Mais em breve!
+### 🌾 Agriculture Update I — Parte de uma Série em Expansão
 
-Esta é a **primeira versão** da série Agriculture Update. Fique atento para a **Agriculture Update II**, que introduzirá:
+Esta é a **primeira versão** da série Agriculture Update. A **Agriculture Update II** já está disponível com:
 
-🥗 **Sistema de Dieta e Nutrição** | 🍳 **Receitas de Culinária** | 🌽 **Novas Variedades de Culturas** | 🥧 **Processamento de Alimentos**
+🥗 **Sistema de Dieta e Nutrição** | 🍳 **29 Receitas de Culinária** | 🌽 **4 Novas Culturas (Tomate, Repolho, Cebola, Arroz)** | 🥧 **Processamento de Alimentos e Rebalanceamento Vanilla**
+
+👉 **[Ler Agriculture Update II](./AGRICULTURE_UPDATE_II_PORTUGUESE.md)**
 
 </div>
 

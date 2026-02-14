@@ -135,9 +135,23 @@ woc.crop.melon.dead=Dead Melon Stem
 woc.crop.melon.rotten=Rotten Melon Stem
 woc.crop.pumpkin.dead=Dead Pumpkin Stem
 woc.crop.pumpkin.rotten=Rotten Pumpkin Stem
+woc.crop.onions.dead=Dead Onions
+woc.crop.onions.rotten=Rotten Onions
+woc.crop.cabbages.dead=Dead Cabbages
+woc.crop.cabbages.rotten=Rotten Cabbages
+woc.crop.tomatoes.dead=Dead Tomatoes
+woc.crop.tomatoes.rotten=Rotten Tomatoes
 woc.crop.sugar_cane.dead=Dead Sugar Cane
 woc.crop.unknown.dead=Dead Crop
 woc.crop.unknown.rotten=Rotten Crop
+
+tile.woc:dead_wheat.name=Dead Wheat
+tile.woc:dead_carrots.name=Dead Carrots
+tile.woc:dead_potatoes.name=Dead Potatoes
+tile.woc:dead_beetroots.name=Dead Beetroots
+tile.woc:dead_onions.name=Dead Onions
+tile.woc:dead_cabbages.name=Dead Cabbages
+tile.woc:dead_tomatoes.name=Dead Tomatoes
 
 block.woc.better_composter.name=Better Composter
 

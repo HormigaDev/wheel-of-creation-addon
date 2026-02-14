@@ -36,7 +36,12 @@
                 "conditions": [
                     {
                         "allowed_faces": ["up"],
-                        "block_filter": ["minecraft:dirt", "minecraft:mud", "woc:rices"]
+                        "block_filter": [
+                            "minecraft:dirt",
+                            "minecraft:mud",
+                            "woc:rices",
+                            "minecraft:grass_block"
+                        ]
                     }
                 ]
             },

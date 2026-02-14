@@ -4,14 +4,14 @@
         "description": {
             "identifier": "minecraft:clownfish"
         },
-
         "components": {
             "minecraft:use_duration": 32,
             "minecraft:max_damage": 0,
             "minecraft:stacked_by_data": true,
             "minecraft:food": {
                 "nutrition": 2,
-                "saturation_modifier": "poor"
+                "saturation_modifier": "poor",
+                "can_always_eat": false
             }
         }
     }

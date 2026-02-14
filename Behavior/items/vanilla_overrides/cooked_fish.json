@@ -4,14 +4,14 @@
         "description": {
             "identifier": "minecraft:cooked_fish"
         },
-
         "components": {
             "minecraft:use_duration": 32,
             "minecraft:max_damage": 0,
             "minecraft:stacked_by_data": true,
             "minecraft:food": {
                 "nutrition": 6,
-                "saturation_modifier": "normal"
+                "saturation_modifier": "normal",
+                "can_always_eat": false
             }
         }
     }

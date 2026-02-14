@@ -4,8 +4,8 @@
         "description": {
             "identifier": "woc:bacon",
             "menu_category": {
-                "category": "nature",
-                "group": "itemGroup.name.crop"
+                "category": "equipment",
+                "group": "itemGroup.name.miscFood"
             }
         },
         "components": {

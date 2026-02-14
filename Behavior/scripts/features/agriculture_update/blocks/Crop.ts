@@ -16,7 +16,7 @@ import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
 import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     CropOptions,
-    getBaseCropVariant,
+    getDeadCropBlockId,
     WOC_FARMLAND_ID,
     getHydration,
     getFertilizerLevel,
@@ -286,13 +286,12 @@ export class Crop implements BlockCustomComponent {
 
     private killCrop(block: Block, type: 'rotten' | 'dead') {
         const currentStage = getGrowthStage(block);
-        const variantIndex = getBaseCropVariant(this.opts.id);
+        const deadBlockId = getDeadCropBlockId(this.opts.id);
 
         killCrop({
             block,
             deathType: type,
-            variant: variantIndex,
-            deadBlockType: 'base',
+            deadBlockId,
             currentStage,
         });
     }

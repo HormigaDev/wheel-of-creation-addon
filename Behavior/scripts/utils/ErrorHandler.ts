@@ -158,6 +158,7 @@ export function safeExecute<T>(fn: () => T, context?: string): SafeResult<T> {
         const value = fn();
         return { success: true, value };
     } catch (err) {
+        console.log(err);
         const error = err instanceof Error ? err : new Error(String(err));
         world.sendMessage(`Error during execution ${context}`);
         logger.error('Error during execution', error, context);

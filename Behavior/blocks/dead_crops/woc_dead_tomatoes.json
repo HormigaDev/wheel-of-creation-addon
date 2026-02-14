@@ -1,0 +1,294 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "woc:dead_tomatoes",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "woc:type": [0, 1],
+                "woc:stage": [0, 1, 2, 3, 4, 5, 6, 7]
+            }
+        },
+        "components": {
+            "tag:minecraft:crop": {},
+            "tag:crop": {},
+            "tag:dead_crop": {},
+
+            "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.woc_crop",
+            "minecraft:collision_box": {
+                "origin": [0, 0, 0],
+                "size": [0, 0, 0]
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 6, 16]
+            },
+            "minecraft:material_instances": {
+                "*": { "texture": "woc_tomatoes_stage_0_dead", "render_method": "alpha_test" }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": ["up"],
+                        "block_filter": ["woc:farmland"]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.0 },
+            "minecraft:loot": "loot_tables/weed.json"
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('woc:stage') == 0",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 6, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 1",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 9, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 2",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 12, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 3",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 14, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 4",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 15, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 5",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 15, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 6",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:stage') == 7",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_0_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_1_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_2_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_3_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_4_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_5_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_6_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 0 && query.block_state('woc:stage') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_7_dead",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 0",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_0_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 1",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_1_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 2",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_2_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 3",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_3_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 4",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_4_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 5",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_5_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 6",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_6_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('woc:type') == 1 && query.block_state('woc:stage') == 7",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "woc_tomatoes_stage_7_rotten",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -15,6 +15,7 @@ import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
 import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     StemCropOptions,
+    DEAD_CROP_BLOCKS,
     WOC_FARMLAND_ID,
     getHydration,
     getFertilizerLevel,
@@ -336,8 +337,8 @@ export class StemCrop implements BlockCustomComponent {
         killCrop({
             block,
             deathType: type,
+            deadBlockId: DEAD_CROP_BLOCKS.stem,
             variant: this.opts.variant,
-            deadBlockType: 'stem',
             currentStage: stage,
         });
     }

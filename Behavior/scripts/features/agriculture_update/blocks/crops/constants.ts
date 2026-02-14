@@ -18,10 +18,9 @@ export const WOC_FARMLAND_ID = 'woc:farmland';
 export const WEED_BLOCK_ID = 'woc:weed';
 
 /**
- * IDs de bloques de cultivos muertos por tipo
+ * IDs de bloques de cultivos muertos por tipo (stem y column)
  */
 export const DEAD_CROP_BLOCKS = {
-    base: 'woc:dead_crop',
     stem: 'woc:stem_dead_crop',
     column: 'woc:column_dead_crop',
 } as const;
@@ -32,29 +31,28 @@ export const DEAD_CROP_BLOCKS = {
 export const HIGH_WATER_THRESHOLD = 8;
 
 /**
- * Mapeo de nombres de cultivos base a sus índices de variante
- * Usado para los bloques de cultivo muerto
+ * Mapeo de IDs de cultivos base a sus bloques muertos individuales
  */
-export const BASE_CROP_VARIANTS: Readonly<Record<string, number>> = {
-    wheat: 0,
-    carrot: 1,
-    carrots: 1,
-    potatoes: 2,
-    potato: 2,
-    beetroots: 3,
-    beetroot: 3,
-    onion: 4,
-    onions: 4,
-    cabbage: 5,
-    cabbages: 5,
-    tomato: 6,
-    tomatoes: 6,
+export const BASE_DEAD_CROP_MAP: Readonly<Record<string, string>> = {
+    wheat: 'woc:dead_wheat',
+    carrots: 'woc:dead_carrots',
+    carrot: 'woc:dead_carrots',
+    potatoes: 'woc:dead_potatoes',
+    potato: 'woc:dead_potatoes',
+    beetroots: 'woc:dead_beetroots',
+    beetroot: 'woc:dead_beetroots',
+    onion: 'woc:dead_onions',
+    onions: 'woc:dead_onions',
+    cabbage: 'woc:dead_cabbages',
+    cabbages: 'woc:dead_cabbages',
+    tomato: 'woc:dead_tomatoes',
+    tomatoes: 'woc:dead_tomatoes',
 };
 
 /**
- * Obtiene el índice de variante para un cultivo base dado su ID
+ * Obtiene el ID del bloque muerto para un cultivo base dado su ID
  */
-export function getBaseCropVariant(cropId: string): number {
+export function getDeadCropBlockId(cropId: string): string {
     const cropName = cropId.split(':')[1] ?? cropId;
-    return BASE_CROP_VARIANTS[cropName] ?? 0;
+    return BASE_DEAD_CROP_MAP[cropName] ?? 'woc:dead_wheat';
 }

@@ -4,21 +4,20 @@
         "description": {
             "identifier": "minecraft:spider_eye"
         },
-
         "components": {
             "minecraft:use_duration": 32,
-
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation_modifier": "poor",
                 "effects": [
                     {
                         "name": "poison",
-                        "chance": 1.0,
+                        "chance": 1,
                         "duration": 5,
                         "amplifier": 0
                     }
-                ]
+                ],
+                "can_always_eat": false
             }
         }
     }

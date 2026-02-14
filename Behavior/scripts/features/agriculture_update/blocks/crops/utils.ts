@@ -1,6 +1,6 @@
 import { Block, Dimension, BlockPermutation } from '@minecraft/server';
 import { ScoreboardRepository } from '../../../../data/ScoreboardRepository';
-import { WOC_FARMLAND_ID, WEED_BLOCK_ID, DEAD_CROP_BLOCKS } from './constants';
+import { WOC_FARMLAND_ID, WEED_BLOCK_ID } from './constants';
 
 /**
  * Obtiene el nivel de hidratación de un bloque de tierra de cultivo
@@ -135,8 +135,8 @@ export function turnToWeed(block: Block): void {
 export interface KillCropOptions {
     block: Block;
     deathType: 'dead' | 'rotten';
-    variant: number;
-    deadBlockType: keyof typeof DEAD_CROP_BLOCKS;
+    deadBlockId: string;
+    variant?: number;
     currentStage?: number;
 }
 
@@ -144,8 +144,7 @@ export interface KillCropOptions {
  * Mata un cultivo y lo convierte en su versión muerta
  */
 export function killCrop(options: KillCropOptions): void {
-    const { block, deathType, variant, deadBlockType, currentStage } = options;
-    const deadBlockId = DEAD_CROP_BLOCKS[deadBlockType];
+    const { block, deathType, deadBlockId, variant, currentStage } = options;
 
     block.dimension.runCommand(`setblock ${block.x} ${block.y} ${block.z} ${deadBlockId} replace`);
 
@@ -153,9 +152,12 @@ export function killCrop(options: KillCropOptions): void {
     if (deadBlock && deadBlock.typeId === deadBlockId) {
         try {
             const states: Record<string, number> = {
-                'woc:variant': variant,
                 'woc:type': deathType === 'rotten' ? 1 : 0,
             };
+
+            if (variant !== undefined) {
+                states['woc:variant'] = variant;
+            }
 
             if (currentStage !== undefined) {
                 states['woc:stage'] = currentStage;

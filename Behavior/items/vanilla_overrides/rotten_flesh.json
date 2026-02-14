@@ -4,7 +4,6 @@
         "description": {
             "identifier": "minecraft:rotten_flesh"
         },
-
         "components": {
             "minecraft:use_duration": 32,
             "minecraft:food": {
@@ -17,7 +16,8 @@
                         "duration": 30,
                         "amplifier": 0
                     }
-                ]
+                ],
+                "can_always_eat": false
             }
         }
     }

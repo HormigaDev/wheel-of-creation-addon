@@ -13,13 +13,11 @@ import {
     Player,
     world,
 } from '@minecraft/server';
-import { getBiomeTemperature } from '../../../config';
 import { ScoreboardRepository } from '../../../data/ScoreboardRepository';
 import { safeExecute } from '../../../utils/ErrorHandler';
 import {
     WaterCropOptions,
     getCropQuality,
-    killCrop,
     isPreferredBiome,
     handleCreativeFertilizerInteraction,
     playFertilizeEffects,
@@ -113,14 +111,7 @@ export class WaterCrop implements BlockCustomComponent {
         }
 
         const biome = dimension.getBiome(block.location);
-        const temp = getBiomeTemperature(biome.id, block.location);
         const isPreferred = isPreferredBiome(biome.id, this.opts.preferredBiomes);
-
-        // Verificar temperatura (puede morir por temperatura extrema)
-        if (temp < this.opts.minTemp || temp > this.opts.maxTemp) {
-            this.killPlant(block);
-            return;
-        }
 
         const deltaTicks = currentTick - stored.lastTick;
         if (deltaTicks <= 0) return;
@@ -527,22 +518,6 @@ export class WaterCrop implements BlockCustomComponent {
         block.dimension.spawnItem(new ItemStack(seedToDrop, 1), block.center());
         block.setType('minecraft:air');
         ScoreboardRepository.delete(block);
-    }
-
-    private killPlant(block: Block) {
-        // Destruir panicle si existe
-        const above = block.above(1);
-        if (above && above.typeId === this.opts.id) {
-            above.dimension.spawnItem(new ItemStack(this.opts.dropItemId, 1), above.center());
-            above.setType('minecraft:air');
-        }
-
-        killCrop({
-            block,
-            deathType: 'dead',
-            variant: this.opts.variant,
-            deadBlockType: 'column',
-        });
     }
 
     toProxy(): BlockCustomComponent {
