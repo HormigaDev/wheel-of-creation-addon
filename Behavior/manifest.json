@@ -4,7 +4,7 @@
         "description": "Wheel of Creation: Agriculture Update",
         "name": "Wheel of Creation: BP",
         "uuid": "6e3ab995-f6cb-49f0-90d4-db99997c02ed",
-        "version": [0, 0, 1],
+        "version": [0, 1, 0],
         "min_engine_version": [1, 21, 0]
     },
     "modules": [
@@ -12,21 +12,21 @@
             "description": "Logic",
             "type": "data",
             "uuid": "894b4eb1-50e9-4255-b799-c97b3ca951e4",
-            "version": [0, 0, 1]
+            "version": [0, 1, 0]
         },
         {
             "description": "Scripts",
             "type": "script",
             "language": "javascript",
             "uuid": "0e52b8bf-f5ba-49aa-834e-90792738d01a",
-            "version": [0, 0, 1],
+            "version": [0, 1, 0],
             "entry": "scripts/main.js"
         }
     ],
     "dependencies": [
         {
             "uuid": "b142028f-1015-4837-a30e-8c3a3bb0adef",
-            "version": [0, 0, 1]
+            "version": [0, 1, 0]
         },
         {
             "module_name": "@minecraft/server",

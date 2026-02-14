@@ -4,7 +4,7 @@
         "description": "Wheel of Creation: Agriculture Update",
         "name": "Wheel of Creation RP",
         "uuid": "b142028f-1015-4837-a30e-8c3a3bb0adef",
-        "version": [0, 0, 1],
+        "version": [0, 1, 0],
         "min_engine_version": [1, 21, 0]
     },
     "modules": [
@@ -12,13 +12,13 @@
             "description": "Resources",
             "type": "resources",
             "uuid": "8063edb5-1e6a-4774-9818-2a9f6db54d94",
-            "version": [0, 0, 1]
+            "version": [0, 1, 0]
         }
     ],
     "dependencies": [
         {
             "uuid": "6e3ab995-f6cb-49f0-90d4-db99997c02ed",
-            "version": [0, 0, 1]
+            "version": [0, 1, 0]
         }
     ]
 }

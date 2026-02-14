@@ -1,6 +1,6 @@
 {
     "name": "wheel_of_creation",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "",
     "scripts": {
         "dev": "node ./scripts/dev.js",
